@@ -1,0 +1,42 @@
+.img-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 40vh;
+    width: 100%;
+    border-radius: 25px;
+    overflow: hidden;
+}
+
+.carousel-container {
+    border-radius: 25px;
+    overflow: hidden;
+    box-shadow: 15px 15px 4px 2px #e4a8db;
+    ;
+}
+
+
+@media screen and (max-width: 960px) {
+    .img-container {
+        height: 60vh;
+        width: 100%;
+    }
+
+}
+
+@media screen and (max-width: 768px) {
+    .img-container {
+        height: 60vh;
+        width: 100%;
+    }
+
+}
+
+@media screen and (max-width: 428px) {
+    .img-container {
+
+        height: 20vh;
+        width: 100%;
+    }
+
+}

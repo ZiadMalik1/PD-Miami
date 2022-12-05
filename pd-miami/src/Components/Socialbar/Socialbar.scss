@@ -1,0 +1,29 @@
+.social__container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #122025;
+    position: sticky;
+    height: 3.1rem;
+    top: 6.2rem;
+    z-index: 999;
+
+    .social__handles {
+        display: flex;
+        flex: 1;
+        justify-content: space-around;
+    }
+
+    .email__handle {
+        display: flex;
+        padding: 5rem;
+        flex: 1;
+        align-items: center;
+        gap: 10px;
+
+        h4 {
+            font-family: 'Roboto', sans-serif;
+        }
+    }
+
+}

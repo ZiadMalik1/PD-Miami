@@ -1,0 +1,32 @@
+.carousel-image {
+    width: 150vh;
+    height: 60vh;
+    object-fit: cover;
+}
+
+@media screen and (max-width: 960px) {
+    .carousel-image {
+        width: 50vh;
+        height: 30vh;
+        object-fit: cover;
+    }
+
+}
+
+@media screen and (max-width: 768px) {
+    .carousel-image {
+        width: 70vh;
+        height: 60vh;
+        object-fit: contain;
+    }
+
+}
+
+@media screen and (max-width: 428px) {
+    .carousel-image {
+        width: 35vh;
+        height: 65vh;
+        object-fit: contain;
+    }
+
+}
