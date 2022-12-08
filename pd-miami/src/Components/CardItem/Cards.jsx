@@ -28,25 +28,6 @@ const Cards = () => {
           <Slideshow className="slides" />
         </div>
       </div>
-      <h1>Checkout Some of our Work</h1>
-      <div className="cards__container">
-        <div className="cards__wrapper">
-          <ul className="cards__items">
-            <CardItem
-              src={Image}
-              text="A Saturday of giving back"
-              label="Adventure"
-              path="/about-us"
-            />
-            <CardItem
-              src={Image}
-              text="A Saturday of giving back"
-              label="Adventure"
-              path="/about-us"
-            />
-          </ul>
-        </div>
-      </div>
     </div>
   );
 };
