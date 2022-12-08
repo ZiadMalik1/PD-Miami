@@ -1,7 +1,6 @@
 import React from "react";
 import Button from "../Button/Button";
 import "./HeroSection.scss";
-import Socialbar from "../Socialbar/Socialbar";
 const HeroSection = () => {
   return (
     <>
