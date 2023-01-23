@@ -16,6 +16,11 @@
     border: 1px solid var(--primary);
 }
 
+.btn--navbar {
+    background-color: #303655;
+    color: #ffffff;
+}
+
 .btn--outline {
     background-color: transparent;
     color: #fff;
@@ -56,6 +61,12 @@
 
 .btn--secondary--outline:hover {
     background-color: #47add8;
+    color: #fff;
+    transition: all 0.3s ease-out;
+}
+
+.btn--navbar:hover {
+    background-color: #b4c5e4;
     color: #fff;
     transition: all 0.3s ease-out;
 }

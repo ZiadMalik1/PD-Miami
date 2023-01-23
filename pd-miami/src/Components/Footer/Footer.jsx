@@ -67,41 +67,101 @@ const Footer = () => {
               </div>
             </div>
             <div className="service__area">
-                <ul className="service__header">
-                    <li className="service__name">Services</li>
-                    <li><a href="#" id="">IT Consulting</a></li>
-                    <li><a href="#" id="">IT Consulting</a></li>
-                    <li><a href="#" id="">IT Consulting</a></li>
-                    <li><a href="#" id="">IT Consulting</a></li>
-                    <li><a href="#" id="">IT Consulting</a></li>
-                </ul>
-                <ul className="service__header">
-                    <li className="service__name">Services</li>
-                    <li><a href="#" id="">IT Consulting</a></li>
-                    <li><a href="#" id="">IT Consulting</a></li>
-                    <li><a href="#" id="">IT Consulting</a></li>
-                    <li><a href="#" id="">IT Consulting</a></li>
-                    <li><a href="#" id="">IT Consulting</a></li>
-                </ul>
-                <ul className="service__header">
-                    <li className="service__name">Services</li>
-                    <li><a href="#" id="">IT Consulting</a></li>
-                    <li><a href="#" id="">IT Consulting</a></li>
-                    <li><a href="#" id="">IT Consulting</a></li>
-                    <li><a href="#" id="">IT Consulting</a></li>
-                    <li><a href="#" id="">IT Consulting</a></li>
-                </ul>
+              <ul className="service__header">
+                <li className="service__name">Services</li>
+                <li>
+                  <a href="#" id="">
+                    IT Consulting
+                  </a>
+                </li>
+                <li>
+                  <a href="#" id="">
+                    IT Consulting
+                  </a>
+                </li>
+                <li>
+                  <a href="#" id="">
+                    IT Consulting
+                  </a>
+                </li>
+                <li>
+                  <a href="#" id="">
+                    IT Consulting
+                  </a>
+                </li>
+                <li>
+                  <a href="#" id="">
+                    IT Consulting
+                  </a>
+                </li>
+              </ul>
+              <ul className="service__header">
+                <li className="service__name">Services</li>
+                <li>
+                  <a href="#" id="">
+                    IT Consulting
+                  </a>
+                </li>
+                <li>
+                  <a href="#" id="">
+                    IT Consulting
+                  </a>
+                </li>
+                <li>
+                  <a href="#" id="">
+                    IT Consulting
+                  </a>
+                </li>
+                <li>
+                  <a href="#" id="">
+                    IT Consulting
+                  </a>
+                </li>
+                <li>
+                  <a href="#" id="">
+                    IT Consulting
+                  </a>
+                </li>
+              </ul>
+              <ul className="service__header">
+                <li className="service__name">Services</li>
+                <li>
+                  <a href="#" id="">
+                    IT Consulting
+                  </a>
+                </li>
+                <li>
+                  <a href="#" id="">
+                    IT Consulting
+                  </a>
+                </li>
+                <li>
+                  <a href="#" id="">
+                    IT Consulting
+                  </a>
+                </li>
+                <li>
+                  <a href="#" id="">
+                    IT Consulting
+                  </a>
+                </li>
+                <li>
+                  <a href="#" id="">
+                    IT Consulting
+                  </a>
+                </li>
+              </ul>
             </div>
           </div>
           <hr />
           <div className="footer__bottom">
             <div className="copy__right">
-            <p class="footer-copyright">© 2022 Awesome Co.</p>
+              <p class="footer-copyright">© 2022 Awesome Co.</p>
             </div>
             <div className="tou">
-                <a href="#">Term Of Use</a>
-                <a href="#">Privacy Policy</a>
-                <a href="#">Cookies</a>
+              <a href="#">Term Of Use</a>
+              <a href="#">Privacy Policy</a>
+              <a href="#">Cookies</a>
             </div>
           </div>
         </div>

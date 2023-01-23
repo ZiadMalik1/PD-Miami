@@ -20,7 +20,7 @@ const Cards = () => {
             expanding to more significant and lasting services like clothing
             drives, and hygiene product distribution.
           </p>
-          <Button buttonStyle="btn--secondary" buttonSize="btn--large">
+          <Button buttonStyle="btn--navbar" buttonSize="btn--large">
             SPONSER AN EVENT
           </Button>
         </div>
