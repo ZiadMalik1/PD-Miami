@@ -38,20 +38,24 @@ video {
 
 @keyframes animate {
 
-    0%{
+    0% {
         background-image: url('../../images/Background_1.jpg');
     }
+
     25% {
-        background-image: url('../../images/Background_2.jpg') ;
+        background-image: url('../../images/Background_2.jpg');
     }
+
     50% {
         background-image: url('../../images/Background_3.jpg');
 
     }
+
     75% {
-        background-image: url('../../images/Background_4.jpg') ;
+        background-image: url('../../images/Background_4.jpg');
     }
-    100%{
+
+    100% {
         background-image: url('../../images/Background_1.jpg');
     }
 
@@ -70,14 +74,14 @@ video {
         font-style: italic;
         font-family: 'Karla', sans-serif;
     }
-    
+
     h1 {
         color: #fbfff1;
         font-size: 85px;
     }
-    
+
     p {
-        color:  #fbfff1;
+        color: #fbfff1;
         font-size: 24px;
         margin-top: 10px;
         font-style: italic;
@@ -127,7 +131,7 @@ video {
     }
 }
 
-@media screen and (max-width: 500px){
+@media screen and (max-width: 500px) {
     .titles-container {
 
         margin-top: -2rem;

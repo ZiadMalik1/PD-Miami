@@ -9,9 +9,7 @@ const HeroSection = () => {
         <div className="titles-container">
           <h2>"Giving is Miami's way of living"</h2>
           <h1 className="title">Project Downtown Miami</h1>
-          <p>
-            Coming together as a community
-          </p>
+          <p>Coming together as a community</p>
         </div>
         <div className="hero-btns">
           <Button
