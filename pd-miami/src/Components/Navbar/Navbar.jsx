@@ -4,7 +4,7 @@ import Button from "../Button/Button";
 import Logo from "../../images/Logo.png";
 import "./Navbar.scss";
 
-const Navbar = () => {
+const Navbar = ({ setModalState }) => {
   const [click, setClick] = useState(false);
   const [button, setButton] = useState(true);
 
@@ -23,6 +23,10 @@ const Navbar = () => {
       setButton(true);
     }
   };
+  
+  const donateClick = () => {
+    
+  }
 
   useEffect(() => {
     showButton();
@@ -97,7 +101,7 @@ const Navbar = () => {
             </li>
           </ul>
           {button && (
-            <Button buttonSize="btn--large" buttonStyle="btn--navbar">
+            <Button buttonSize="btn--large" buttonStyle="btn--navbar" onClick={setModalState}>
               Donate <i class="fa-solid fa-arrow-right"></i>
             </Button>
           )}
