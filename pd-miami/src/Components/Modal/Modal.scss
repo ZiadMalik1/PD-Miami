@@ -1,31 +1,36 @@
-.modal__container {
-  grid-template-columns: repeat(1, 1fr);
-  align-items: center;
-  column-gap: 4rem;
-}
-
-.services__content {
-  position: relative;
-  border: 1px solid rgba(0, 0, 0, 0.1);
-  background-color: #f7fafe;
-  padding: 6rem 0 2rem 2.5rem;
-}
-
 .services__modal {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   position: fixed;
   top: 0;
-  left: 0;
   right: 0;
+  left: 0;
   bottom: 0;
-  background-color: rgba(0, 0, 0, 0.5);
-  z-index: 999;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 0 1rem;
+  padding: 1rem;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 9999;
   opacity: 0;
-  visibility: hidden;
-  transition: 0.3s;
+  width: 100vw;
+  animation: show 0.5s ease;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+@keyframes show {
+  0% {
+    display: none;
+    opacity: 0;
+  }
+
+  1% {
+    display: flex;
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
 }
 
 .active-modal {
@@ -34,26 +39,33 @@
 }
 
 .services__modal-content {
-  width: 500px;
-  position: relative;
+  width: 50vh;
   background: #f7fafe;
-  padding: 4.5rem 2.5rem 2.5rem;
+  box-shadow: 0, 0, 0.625rem, rgba(0, 0, 0, 0.2);
+  position: relative;
+  padding: 4.5rem 0 2.5rem;
   border-radius: 1.5rem;
-  max-height: calc(100vh - 210px);
-  overflow-y: auto;
   display: flex;
   flex-direction: column;
+  height: auto;
 
   .header-content {
     display: flex;
     justify-content: center;
     align-items: center;
     position: relative;
+    flex-direction: column;
+    gap: 10px;
+
+    .caption {
+      text-align: center;
+      width: 30vh;
+    }
 
     .close-button {
       position: absolute;
-      top: 50%;
-      left: 95%;
+      top: 0%;
+      left: 85%;
       transform: translateY(-50%);
       color: black
     }
@@ -62,8 +74,25 @@
       color: #303655;
       cursor: pointer;
     }
-
   }
+  .continue-container{
+    display: flex;
+    width: 100%;
+    height: auto;
+    justify-content: flex-end;
+
+    i {
+      font-size: 25px;
+      margin-right: 50px;
+      color: #303655;
+    }
+
+    i:hover {
+      color: black;
+      cursor: pointer;
+    }
+  }
+
 }
 
 .services__modal-close {
@@ -80,6 +109,11 @@
   text-align: center;
 }
 
+@media only screen and (max-width: 600px) {
+  .services__modal-content {
+    width: 35vh;
+  }
+}
 
 @media screen and (max-width: 992px) {
   .services__content {

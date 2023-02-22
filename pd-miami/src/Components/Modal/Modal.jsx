@@ -1,42 +1,81 @@
-import React from "react";
+import React, { useEffect, useRef, useCallback, useState } from "react";
+import isNil from "lodash/fp/isNil";
 import { TfiClose } from "react-icons/tfi";
-import getStripe from "../../../lib/getStripe";
+import Amount from "../Amount/Amount";
 import "./Modal.scss";
+import StripeContainer from "../StripeContainer/StripeContainer";
 
 const DonationModal = ({ modalState, setModalState }) => {
-  async function handleCheckout() {
-    const stripe = await getStripe();
-    const { error } = await stripe.redirectToCheckout({
-      lineItems: [
-        {
-          price: process.env.NEXT_PUBLIC_STRIPE_PRICE_ID,
-          quantity: 1,
-        },
-      ],
-      mode: "subscription",
-      successUrl: `http://localhost:3000/success`,
-      cancelUrl: `http://localhost:3000/cancel`,
-      customerEmail: "customer@email.com",
-    });
-    console.warn(error.message);
-  }
+  const modal = useRef(null);
+  const [amount, setAmount] = useState(0);
+
+  // const handleKeyUp = useCallback(
+  //   (e) => {
+  //     const keys = {
+  //       27: () => {
+
+  //           e.preventDefault();
+  //           setModalState();
+  //           window.removeEventListener("keyup", handleKeyUp, false);
+
+  //       },
+  //     };
+
+  //     if (keys[e.keyCode]) {
+  //       keys[e.keyCode]();
+  //     }
+  //   },
+  //   [setModalState]
+  // );
+
+  // const handleOutsideClick = useCallback(
+  //   (e) => {
+  //     if (!isNil(modal) && modalState) {
+  //       if (!modal.current.contains(e.target)) {
+  //         if (modalState) {
+  //           setModalState();
+  //           document.removeEventListener("click", handleOutsideClick, false);
+  //         }
+  //       }
+  //     }
+  //   },
+  //   [setModalState]
+  // );
+
+  // useEffect(() => {
+  //   window.addEventListener("keyup", handleKeyUp, false);
+  //   document.addEventListener("click", handleOutsideClick, false);
+
+  //   return () => {
+  //     window.removeEventListener("keyup", handleKeyUp, false);
+  //     document.removeEventListener("click", handleOutsideClick, false);
+  //   };
+  // }, [handleKeyUp, handleOutsideClick]);
 
   return (
     <>
       <div
         className={
-          modalState === true
-            ? "services__modal active-modal"
-            : "services__modal"
+          modalState ? "services__modal active-modal" : "services__modal"
         }
       >
-        <div className="services__modal-content">
+        <div className="services__modal-content" ref={modal}>
           <div className="header-content">
-            <h3 className="services__modal-title">Donate Now!</h3>
-            <TfiClose className="close-button" onClick={setModalState} />
+            <div className="header">
+              <h2 className="services__modal-title">Donate</h2>
+              <TfiClose className="close-button" onClick={setModalState} />
+            </div>
+            <div className="caption">
+              Help us with the costs of maintaining this service on a weekly
+              basis.
+            </div>
           </div>
           <div className="body-content">
-            <button onClick={handleCheckout}>Checkout</button>
+            {amount ? (
+              <StripeContainer amount={amount} />
+            ) : (
+              <Amount setAmount={setAmount} />
+            )}
           </div>
         </div>
       </div>

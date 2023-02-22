@@ -23,10 +23,6 @@ const Navbar = ({ setModalState }) => {
       setButton(true);
     }
   };
-  
-  const donateClick = () => {
-    
-  }
 
   useEffect(() => {
     showButton();

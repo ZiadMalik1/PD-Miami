@@ -2,11 +2,14 @@ import React from "react";
 import CardItem from "./CardItem";
 import Image from "../../images/background.jpg";
 import Slideshow from "../Slideshow/Slideshow";
+import { useNavigate } from "react-router-dom";
 import image4 from "../../images/Photos/4.jpg";
 import "./Cards.scss";
 import Button from "../Button/Button";
+import { Navigate } from "react-router";
 
 const Cards = () => {
+  const navigate = useNavigate();
   return (
     <div className="cards">
       <div className="about__container">
@@ -20,7 +23,11 @@ const Cards = () => {
             expanding to more significant and lasting services like clothing
             drives, and hygiene product distribution.
           </p>
-          <Button buttonStyle="btn--navbar" buttonSize="btn--large">
+          <Button
+            buttonStyle="btn--navbar"
+            buttonSize="btn--large"
+            onClick={() => navigate("/contact-us")}
+          >
             SPONSER AN EVENT
           </Button>
         </div>
