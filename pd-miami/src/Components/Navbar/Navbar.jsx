@@ -4,7 +4,7 @@ import Button from "../Button/Button";
 import Logo from "../../images/Logo.png";
 import "./Navbar.scss";
 
-const Navbar = () => {
+const Navbar = ({ setModalState }) => {
   const [click, setClick] = useState(false);
   const [button, setButton] = useState(true);
 
@@ -33,6 +33,19 @@ const Navbar = () => {
   return (
     <>
       <nav className="navbar">
+        <div className="socials-container">
+          <div className="email-container">
+            <i class="fa fa-envelope" aria-hidden="true"></i>
+            <span>mchwihne@gmail.com</span>
+          </div>
+          <div className="social-links">
+            <i class="fa-brands fa-instagram"></i>
+            <p>|</p>
+            <i class="fa-brands fa-facebook-f"></i>
+            <p>|</p>
+            <i class="fa-brands fa-linkedin-in"></i>
+          </div>
+        </div>
         <div className="navbar-container">
           <Link to={"/"} className="logo-container" onClick={closeMobileMenu}>
             <img src={Logo} className="logo" />
@@ -52,30 +65,42 @@ const Navbar = () => {
                 className="nav-links"
                 onClick={closeMobileMenu}
               >
-                Services
+                About
               </Link>
             </li>
             <li className="nav-item">
               <Link
-                to="/products"
+                to="/services"
                 className="nav-links"
                 onClick={closeMobileMenu}
               >
-                Products
+                Get Involved
               </Link>
             </li>
-
-            <li>
+            <li className="nav-item">
               <Link
-                to="/sign-up"
-                className="nav-links-mobile"
+                to="/services"
+                className="nav-links"
                 onClick={closeMobileMenu}
               >
-                Sign Up
+                The Board
+              </Link>
+            </li>
+            <li className="nav-item">
+              <Link
+                to="/services"
+                className="nav-links"
+                onClick={closeMobileMenu}
+              >
+                Contact
               </Link>
             </li>
           </ul>
-          {button && <Button buttonStyle="btn--outline">SIGN UP</Button>}
+          {button && (
+            <Button buttonSize="btn--large" buttonStyle="btn--navbar" onClick={setModalState}>
+              Donate <i class="fa-solid fa-arrow-right"></i>
+            </Button>
+          )}
         </div>
       </nav>
     </>

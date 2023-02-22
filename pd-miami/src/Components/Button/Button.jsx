@@ -1,15 +1,16 @@
 import React from "react";
 import "./Button.scss";
-import { Link } from "react-router-dom";
 
 const STYLES = [
   "btn--primary",
   "btn--outline",
   "btn--secondary",
   "btn--secondary--outline",
+  "btn--navbar",
+  "btn--donation"
 ];
 
-const SIZES = ["btn--medium", "btn--large"];
+const SIZES = ["btn--small", "btn--medium", "btn--large"];
 
 const Button = ({ children, type, onClick, buttonStyle, buttonSize }) => {
   const checkButtonStyle = STYLES.includes(buttonStyle)
@@ -20,15 +21,13 @@ const Button = ({ children, type, onClick, buttonStyle, buttonSize }) => {
 
   return (
     <>
-      <Link to="/sign-up" className="btn-mobile">
-        <button
-          className={`btn ${checkButtonStyle} ${checkButtonSize}`}
-          onClick={onClick}
-          type={type}
-        >
-          {children}
-        </button>
-      </Link>
+      <button
+        className={`btn ${checkButtonStyle} ${checkButtonSize}`}
+        onClick={onClick}
+        type={type}
+      >
+        {children}
+      </button>
     </>
   );
 };

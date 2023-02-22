@@ -5,23 +5,16 @@ const HeroSection = () => {
   return (
     <>
       <div className="overlay"></div>
-      <div className="background"></div>
       <div className="hero-container">
-        <h1 className="title">Project Downtown Miami</h1>
-        <p>
-          Coming together as a community to give back to the streets of Miami
-        </p>
+        <div className="titles-container">
+          <h2>"Giving is Miami's way of living"</h2>
+          <h1 className="title">Project Downtown Miami</h1>
+          <p>Coming together as a community</p>
+        </div>
         <div className="hero-btns">
           <Button
             className="btns"
             buttonStyle="btn--outline"
-            buttonSize="btn--large"
-          >
-            Donate Now
-          </Button>
-          <Button
-            className="btns"
-            buttonStyle="btn--primary"
             buttonSize="btn--large"
           >
             Get to Know us! <i className="far fa-play-circle"></i>
