@@ -97,7 +97,11 @@ const Navbar = ({ setModalState }) => {
             </li>
           </ul>
           {button && (
-            <Button buttonSize="btn--large" buttonStyle="btn--navbar" onClick={setModalState}>
+            <Button
+              buttonSize="btn--large"
+              buttonStyle="btn--navbar"
+              onClick={setModalState}
+            >
               Donate <i class="fa-solid fa-arrow-right"></i>
             </Button>
           )}

@@ -3,7 +3,8 @@ import PaymentForm from "../PaymentForm/PaymentForm";
 import { loadStripe } from "@stripe/stripe-js";
 import { Elements } from "@stripe/react-stripe-js";
 
-const PUBLIC_KEY = "pk_test_51MXt1XIAh3j0XzoY7kp4d6ZlfhjieXigaJDHpP5FpjShpvZFn1gb0yqShCRzPATH0xvSPaNvaWRnw3H2uUDcCsJc00xk8SBLKF";
+const PUBLIC_KEY =
+  "pk_test_51MXt1XIAh3j0XzoY7kp4d6ZlfhjieXigaJDHpP5FpjShpvZFn1gb0yqShCRzPATH0xvSPaNvaWRnw3H2uUDcCsJc00xk8SBLKF";
 const stripeTestPromise = loadStripe(PUBLIC_KEY);
 
 const StripeContainer = ({ amount }) => {
@@ -25,7 +26,7 @@ const StripeContainer = ({ amount }) => {
     fetch("http://localhost:4242/create-payment-intent", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ items: {amount: amount} }),
+      body: JSON.stringify({ items: { amount: amount } }),
     })
       .then((res) => res.json())
       .then((data) => setClientSecret(data.clientSecret));

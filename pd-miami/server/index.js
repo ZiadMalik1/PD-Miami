@@ -18,8 +18,6 @@ app.use(express.json());
 app.use(cors());
 
 const getAmount = (amount) => {
-  console.log(amount);
-  console.log(typeof amount);
   return amount.amount * 100;
 };
 

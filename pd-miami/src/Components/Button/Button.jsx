@@ -7,7 +7,7 @@ const STYLES = [
   "btn--secondary",
   "btn--secondary--outline",
   "btn--navbar",
-  "btn--donation"
+  "btn--donation",
 ];
 
 const SIZES = ["btn--small", "btn--medium", "btn--large"];

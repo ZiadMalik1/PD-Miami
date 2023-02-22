@@ -22,7 +22,7 @@
 
         }
 
-        @media only screen and (max-width: 400px){
+        @media only screen and (max-width: 400px) {
             .amount {
                 width: 15vw;
                 font-size: 4vw;
@@ -30,8 +30,8 @@
         }
 
     }
-    
-    
+
+
 
     h3 {
         font-weight: normal;
@@ -39,11 +39,14 @@
 
     input {
         border: 1px solid #ccc;
-        font-size: 22px; /* fallback */
+        font-size: 22px;
+        /* fallback */
         font-size: 22px;
         padding: 15px;
-        width: 90%; /* fallback */
-        width: calc(100% - 75px); /* full width minus padding */
+        width: 90%;
+        /* fallback */
+        width: calc(100% - 75px);
+        /* full width minus padding */
         text-align: center;
-      }
+    }
 }

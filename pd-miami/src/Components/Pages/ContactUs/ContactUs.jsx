@@ -1,5 +1,5 @@
-import React, { useRef } from 'react';
-import emailjs from '@emailjs/browser';
+import React, { useRef } from "react";
+import emailjs from "@emailjs/browser";
 
 export const ContactUs = () => {
   const form = useRef();
@@ -7,13 +7,22 @@ export const ContactUs = () => {
   const sendEmail = (e) => {
     e.preventDefault();
 
-    emailjs.sendForm('service_qxam7qu', 'template_11oi9xs', form.current, 'wB9xgbi2EGeJfkVYS')
-      .then((result) => {
+    emailjs
+      .sendForm(
+        "service_qxam7qu",
+        "template_11oi9xs",
+        form.current,
+        "wB9xgbi2EGeJfkVYS"
+      )
+      .then(
+        (result) => {
           console.log(result.text);
-          e.target.reset()
-      }, (error) => {
+          e.target.reset();
+        },
+        (error) => {
           console.log(error.text);
-      });
+        }
+      );
   };
 
   return (

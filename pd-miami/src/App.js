@@ -19,13 +19,15 @@ const App = () => {
     <>
       <Router>
         <Navbar setModalState={toggleModal} />
-        <div className="modal_wrapper">{modalState && (
-          <Modal modalState={modalState} setModalState={toggleModal} />
-        )}</div>
-        
+        <div className="modal_wrapper">
+          {modalState && (
+            <Modal modalState={modalState} setModalState={toggleModal} />
+          )}
+        </div>
+
         <Routes>
           <Route path="/" exact element={<Home />} />
-          <Route path="/success" exact element={<PaymentSuccess/>} />
+          <Route path="/success" exact element={<PaymentSuccess />} />
           <Route path="/contact-us" exact element={<ContactUs />} />
         </Routes>
         <Footer />
