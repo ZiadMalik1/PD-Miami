@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import Button from "../Button/Button";
-import Logo from "../../images/Logo.png";
-import "./Navbar.scss";
+import Button from "../../../UI/Button/Button";
+import classes from "./Navbar.module.scss";
 
-const Navbar = ({ setModalState }) => {
+const Navbar = ({ isMenu, menuToggle }) => {
+  console.log(isMenu);
   const [click, setClick] = useState(false);
   const [button, setButton] = useState(true);
 
@@ -32,7 +32,7 @@ const Navbar = ({ setModalState }) => {
 
   return (
     <>
-      <nav className="navbar">
+      {/* <nav className="navbar">
         <div className="socials-container">
           <div className="email-container">
             <i class="fa fa-envelope" aria-hidden="true"></i>
@@ -88,7 +88,7 @@ const Navbar = ({ setModalState }) => {
             </li>
             <li className="nav-item">
               <Link
-                to="/services"
+                to="/contact-us"
                 className="nav-links"
                 onClick={closeMobileMenu}
               >
@@ -106,6 +106,22 @@ const Navbar = ({ setModalState }) => {
             </Button>
           )}
         </div>
+      </nav> */}
+      <nav className={isMenu ? classes.menu__nav : classes.nav}>
+        <ul>
+          <li onClick={menuToggle}>
+            <a href="/">Locations</a>
+          </li>
+          <li onClick={menuToggle}>
+            <a href="/">Donate</a>
+          </li>
+          <li onClick={menuToggle}>
+            <a href="/">Learn More</a>
+          </li>
+        </ul>
+        <Button className={classes.booknow} onClick={menuToggle}>
+          Donate Now
+        </Button>
       </nav>
     </>
   );
