@@ -1,7 +1,11 @@
 import React, { useState } from "react";
+import { Route, Routes } from "react-router-dom";
 import "./App.scss";
+import Footer from "./components/Footer/Footer";
 import Header from "./components/Header/Header";
 import Home from "./pages/Home";
+import LearnMore from "./pages/LearnMore/LearnMore";
+import LocationsPage from "./pages/LocationsPage";
 
 const App = () => {
   const [modalState, setModalState] = useState(false);
@@ -11,29 +15,13 @@ const App = () => {
 
   return (
     <>
-
-      {/* <Router>
-        <div className="app--container">
-          <Navbar setModalState={toggleModal} />
-          <div className="modal_wrapper">
-            {modalState && (
-              <Modal modalState={modalState} setModalState={toggleModal} />
-            )}
-          </div>
-          <Routes>
-            <Route path="/" exact element={<Home />} />
-            <Route path="/success" exact element={<PaymentSuccess />} />
-            <Route
-              path="/contact-us"
-              exact
-              element={<ContactUs className="home" />}
-            />
-          </Routes>
-          <Footer />
-        </div>
-      </Router> */}
       <Header />
-      <Home />
+      <Routes>
+        <Route path="/" exact element={<Home />} />
+        <Route path="/learn-more" exact element={<LearnMore />} />
+        <Route path="/locations" exact element={<LocationsPage />} />
+      </Routes>
+      <Footer />
     </>
   );
 };

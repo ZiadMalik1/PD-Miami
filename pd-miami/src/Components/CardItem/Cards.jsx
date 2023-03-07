@@ -1,7 +1,6 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
-import Button from "../Button/Button";
-import Slideshow from "../Slideshow/Slideshow";
+import Button from "../../UI/Button/Button";
 import "./Cards.scss";
 
 const Cards = () => {
@@ -19,16 +18,7 @@ const Cards = () => {
             expanding to more significant and lasting services like clothing
             drives, and hygiene product distribution.
           </p>
-          <Button
-            buttonStyle="btn--navbar"
-            buttonSize="btn--large"
-            onClick={() => navigate("/contact-us")}
-          >
-            SPONSER AN EVENT
-          </Button>
-        </div>
-        <div className="slide__container">
-          <Slideshow className="slides" />
+          <Button>Sponser an Event</Button>
         </div>
       </div>
     </div>

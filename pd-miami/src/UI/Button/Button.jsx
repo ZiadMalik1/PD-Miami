@@ -1,27 +1,21 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import classes from "./Button.module.scss";
 
-const STYLES = [
-  "btn--primary",
-  "btn--outline",
-  "btn--secondary",
-  "btn--secondary--outline",
-  "btn--navbar",
-  "btn--donation",
-];
-
-const SIZES = ["btn--small", "btn--medium", "btn--large"];
-
-const Button = ({ outline, children, onClick }) => {
-  // const checkButtonStyle = STYLES.includes(buttonStyle)
-  //   ? buttonStyle
-  //   : STYLES[0];
-
-  // const checkButtonSize = SIZES.includes(buttonSize) ? buttonSize : SIZES[0];
+const Button = ({ outline, alt, children, onClick, to }) => {
+  const navigate = useNavigate();
 
   return (
     <>
-      <button onClick={onClick} className={`${classes.button} ${outline ? classes.outline : ""}`}>
+      <button
+        onClick={() => {
+          onClick && onClick();
+          navigate(to);
+        }}
+        className={`${alt ? classes.button__alt : classes.button} ${
+          outline ? classes.outline : ""
+        }`}
+      >
         {children}
       </button>
     </>
