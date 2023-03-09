@@ -17,7 +17,7 @@ const App = () => {
     <>
       <Header />
       <Routes>
-        <Route path="/PD-Miami/" exact element={<Home />} />
+        <Route path="/PD-Miami" exact element={<Home />} />
         <Route path="/learn-more" exact element={<LearnMore />} />
         <Route path="/locations" exact element={<LocationsPage />} />
       </Routes>
