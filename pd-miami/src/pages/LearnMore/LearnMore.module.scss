@@ -71,7 +71,7 @@
                         letter-spacing: $letterSpacing;
                         font-weight: 900;
                         position: relative;
-                        margin-bottom: $spacing-xs;
+                        margin-bottom: $spacing-md;
                     }
 
                     &__subtitle {
@@ -80,7 +80,7 @@
                         letter-spacing: $letterSpacing;
                         font-weight: 900;
                         position: relative;
-                        margin-bottom: $spacing-sm;
+                        margin-bottom: $spacing-xs;
                     }
 
                     &__button {
@@ -98,6 +98,7 @@
                 justify-content: center;
                 width: 100%;
                 height: 100%;
+                margin: 1rem 0 0.5rem 0;
             }
 
 

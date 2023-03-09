@@ -41,6 +41,9 @@ const LearnMore = () => {
                 corporis natus ducimus nulla velit minus, cum mollitia rerum
                 facilis eum vero ipsam non, reiciendis quas totam voluptatum
                 facere quisquam soluta provident itaque. Dolorem laboriosam odio
+                <div className={classes.photos__content__gallery__slideshow}>
+                  <Slideshow />
+                </div>
                 <span
                   className={
                     classes.photos__content__gallery__learn__title__button
@@ -55,9 +58,6 @@ const LearnMore = () => {
                     Donate
                   </Button>
                 </span>
-              </div>
-              <div className={classes.photos__content__gallery__slideshow}>
-                <Slideshow />
               </div>
             </div>
           </div>
