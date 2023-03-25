@@ -11,8 +11,8 @@ const HomePageContent = () => {
       </span>
       <h1 className={classes.hero__content__title}>Project Downtown Miami</h1>
       <p className={classes.hero__content__description}>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere beatae
-        itaque ea ducimus, mollitia voluptate laudantium.
+        Coming together to fulfill the mission to better the lives of those most
+        at risk in the greater Miami area.
       </p>
       <div className={classes.hero__content__cta}>
         <Button to="/booknow">Donate Now</Button>

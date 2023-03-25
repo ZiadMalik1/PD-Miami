@@ -69,6 +69,7 @@
     "start": "node scripts/start.js",
     "build": "node scripts/build.js",
     "test": "node scripts/test.js",
+    "lint": "eslint --fix --ext .js,.jsx .",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build"
   },
