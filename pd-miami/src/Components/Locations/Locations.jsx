@@ -9,56 +9,61 @@ import BoraBoraJPG from "./../../assets/images/Background_4.jpg";
 const locationData = [
   {
     id: 1,
-    location: "PD Miami",
+    location: "American Student Dental Association",
     isFeatured: true,
-    img: BoraBoraJPG,
+    link: "https://fiu.campuslabs.com/engage/organization/asdafiu",
+    img: ASDAImg,
   },
   {
     id: 2,
-    location: "PD Miami",
+    location: "Change Makers Florida",
     isFeatured: true,
-    img: BoraBoraJPG,
+    link: "https://www.instagram.com/changemakersfl/",
+    img: ChangeMakers,
   },
   {
     id: 3,
-    location: "PD Miami",
+    location: "Who is Hussain",
     isFeatured: true,
-    img: BoraBoraJPG,
+    link: "https://whoishussain.org",
+    img: Wih,
   },
   {
     id: 4,
-    location: "PD Miami",
-    isFeatured: true,
-    img: BoraBoraJPG,
+    location: "Pre-Dental FIU",
+    isFeatured: false,
+    link: "https://www.instagram.com/predentalfiu/",
+    img: PreDental,
   },
   {
     id: 5,
-    location: "PD Miami",
-    isFeatured: true,
-    img: BoraBoraJPG,
+    location: "H.E.A.L FIU",
+    isFeatured: false,
+    link: "https://fiuheal.wixsite.com/heal-fiu",
+    img: Heal,
   },
   {
     id: 6,
-    location: "PD Miami",
-    isFeatured: true,
-    img: BoraBoraJPG,
+    location: "National Council of Negro Women",
+    isFeatured: false,
+    img: NCNW,
   },
   {
     id: 7,
     location: "PD Miami",
-    isFeatured: true,
+    isFeatured: false,
     img: BoraBoraJPG,
   },
   {
     id: 8,
     location: "PD Miami",
-    isFeatured: true,
+    isFeatured: false,
     img: BoraBoraJPG,
   },
   {
     id: 9,
     location: "PD Miami",
-    isFeatured: true,
+    isFeatured: false,
     img: BoraBoraJPG,
   },
 ];
@@ -70,11 +75,15 @@ const Locations = ({ page }) => {
       <div className={`${classes.locations} ${page ? classes.page : ""}`}>
         <div className={classes.locations__content}>
           <h2 className={classes.locations__content__title}>
-            Discover a Tropic
+            Recent Collaborations
           </h2>
           <div className={classes.locations__content__gallery}>
-            {mapData.map(({ id, location, isFeatured, img }) => (
-              <div className={classes.gallery__item} key={id}>
+            {mapData.map(({ id, location, isFeatured, link, img, icon }) => (
+              <div
+                className={classes.gallery__item}
+                key={id}
+                onClick={() => window.open(link, "__blank")}
+              >
                 <img
                   src={img}
                   alt={location}
@@ -82,7 +91,6 @@ const Locations = ({ page }) => {
                 />
                 <div className={classes.overlay} />
                 <div className={classes.gallery__item__content}>
-                  <IoLocationOutline />
                   <h2 className={classes.gallery__item__content__location}>
                     {location}
                   </h2>
