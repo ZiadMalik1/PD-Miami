@@ -3,7 +3,7 @@ import Button from "../../UI/Button/Button";
 import bannerImg from "../../assets/images/Background_3.jpg";
 import classes from "./Hero.module.scss";
 
-const HomePageContent = () => {
+const HomePageContent = ({ onClick }) => {
   return (
     <>
       <span className={classes.hero__content__tagline}>
@@ -15,7 +15,7 @@ const HomePageContent = () => {
         itaque ea ducimus, mollitia voluptate laudantium.
       </p>
       <div className={classes.hero__content__cta}>
-        <Button to="/booknow">Donate Now</Button>
+        <Button onClick={onClick}>Donate Now</Button>
         <Button to="/learn-more" outline>
           Learn More
         </Button>
@@ -37,14 +37,14 @@ const LearnPageContent = () => {
   );
 };
 
-const HeroSection = ({ pageName, children }) => {
+const HeroSection = ({ pageName, children, onClick }) => {
   return (
     <>
       <div className={classes.container}>
         <img className={classes.image} id={"image"} src={bannerImg} alt="" />
         <div className={classes.hero}>
           <div className={classes.hero__content}>
-            {!pageName && <HomePageContent />}
+            {!pageName && <HomePageContent onClick={onClick} />}
             {pageName === "learn" && <LearnPageContent />}
           </div>
         </div>

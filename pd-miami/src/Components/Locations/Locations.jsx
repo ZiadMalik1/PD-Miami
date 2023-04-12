@@ -1,10 +1,22 @@
 import React from "react";
 import { BsArrowRight } from "react-icons/bs";
+<<<<<<< Updated upstream
 import { IoLocationOutline } from "react-icons/io5";
+=======
+>>>>>>> Stashed changes
 import { Link } from "react-router-dom";
 import classes from "./Locations.module.scss";
 
 import BoraBoraJPG from "./../../assets/images/Background_4.jpg";
+<<<<<<< Updated upstream
+=======
+import ASDAImg from "./../../assets/images/Photos/3.jpg";
+import ChangeMakers from "./../../assets/images/Photos/ChangeMakers.jpg";
+import Heal from "./../../assets/images/Photos/Heal.JPG";
+import NCNW from "./../../assets/images/Photos/NCNW.png";
+import PreDental from "./../../assets/images/Photos/PreDental.PNG";
+import Wih from "./../../assets/images/Photos/WhoIsHussain.png";
+>>>>>>> Stashed changes
 
 const locationData = [
   {
@@ -39,9 +51,16 @@ const locationData = [
   },
   {
     id: 6,
+<<<<<<< Updated upstream
     location: "PD Miami",
     isFeatured: true,
     img: BoraBoraJPG,
+=======
+    location: "National Council of Negro Women",
+    link: "https://ncnw.org",
+    isFeatured: false,
+    img: NCNW,
+>>>>>>> Stashed changes
   },
   {
     id: 7,
