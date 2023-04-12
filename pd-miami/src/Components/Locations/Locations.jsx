@@ -5,6 +5,12 @@ import { Link } from "react-router-dom";
 import classes from "./Locations.module.scss";
 
 import BoraBoraJPG from "./../../assets/images/Background_4.jpg";
+import ASDAImg from "./../../assets/images/Photos/3.jpg";
+import ChangeMakers from "./../../assets/images/Photos/ChangeMakers.jpg";
+import Wih from "./../../assets/images/Photos/WhoIsHussain.png";
+import PreDental from "./../../assets/images/Photos/PreDental.PNG";
+import Heal from "./../../assets/images/Photos/Heal.JPG";
+import NCNW from "./../../assets/images/Photos/NCNW.png";
 
 const locationData = [
   {
