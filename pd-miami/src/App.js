@@ -9,15 +9,18 @@ import LocationsPage from "./pages/LocationsPage";
 
 const App = () => {
   const [modalState, setModalState] = useState(false);
-  const toggleModal = () => {
-    setModalState(!modalState);
-  };
 
   return (
     <>
-      <Header />
+      <Header modalState={modalState} setModalState={setModalState} />
       <Routes>
-        <Route path="/" exact element={<Home />} />
+        <Route
+          path="/"
+          exact
+          element={
+            <Home modalState={modalState} setModalState={setModalState} />
+          }
+        />
         <Route path="/learn-more" exact element={<LearnMore />} />
         <Route path="/locations" exact element={<LocationsPage />} />
       </Routes>

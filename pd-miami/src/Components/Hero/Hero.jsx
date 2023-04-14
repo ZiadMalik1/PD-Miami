@@ -11,11 +11,11 @@ const HomePageContent = ({ onClick }) => {
       </span>
       <h1 className={classes.hero__content__title}>Project Downtown Miami</h1>
       <p className={classes.hero__content__description}>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere beatae
-        itaque ea ducimus, mollitia voluptate laudantium.
+        Coming together to provide services for the betterment of the
+        underserved community in Miami, FL
       </p>
       <div className={classes.hero__content__cta}>
-        <Button onClick={onClick}>Donate Now</Button>
+        <Button onClick={onClick}>Donate</Button>
         <Button to="/learn-more" outline>
           Learn More
         </Button>
@@ -37,7 +37,7 @@ const LearnPageContent = () => {
   );
 };
 
-const HeroSection = ({ pageName, children, onClick }) => {
+const HeroSection = ({ pageName, onClick }) => {
   return (
     <>
       <div className={classes.container}>

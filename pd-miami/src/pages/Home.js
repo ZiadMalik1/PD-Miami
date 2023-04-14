@@ -2,19 +2,28 @@ import { default as React, useEffect, useState } from "react";
 
 import Hero from "../components/Hero/Hero";
 import Locations from "../components/Locations/Locations";
-import Modal from "../components/Modal/DonationModal";
+import DonationForm from "../components/DonationForm/DonationForm";
+import Modal from "../UI/Modal/Modal";
 
-const Home = () => {
-  const [modalState, setModalState] = useState(false);
-
-  useEffect(() => {
-    console.log(modalState);
-  }, [modalState]);
-
+const Home = ({ modalState, setModalState }) => {
   return (
     <>
       <div>
-        <Modal modalState={modalState} onClose={() => setModalState(false)} />
+        {modalState && (
+          <Modal onCloseRequest={() => setModalState(false)}>
+            <h1
+              style={{
+                fontFamily: "Roboto",
+                fontSize: "22px",
+                margin: "2px",
+                fontWeight: "300",
+              }}
+            >
+              Donation Form
+            </h1>
+            <DonationForm />
+          </Modal>
+        )}
         <Hero onClick={() => setModalState(true)} />
         <Locations />
       </div>

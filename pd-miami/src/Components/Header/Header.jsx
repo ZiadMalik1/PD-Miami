@@ -5,7 +5,7 @@ import useWindowSize from "../../hooks/useWindowSize";
 import classes from "./Header.module.scss";
 import Navbar from "./Navbar/Navbar";
 
-const Header = () => {
+const Header = ({ modalState, setModalState }) => {
   const [menuOpen, setMenuOpen] = useState(false);
   const size = useWindowSize();
 
@@ -29,11 +29,15 @@ const Header = () => {
     <>
       <header className={classes.header}>
         <Logo />
-        <Navbar />
+        <Navbar modalState={modalState} onClick={() => setModalState(true)} />
         <div className={classes.header__menu}>
           <div className={classes.header__menu__toggle}>{menuToggle}</div>
           <aside className={`${classes.menu} ${menuOpen && classes.show}`}>
-            <Navbar isMenu menuToggle={handleMenuToggle} />
+            <Navbar
+              isMenu
+              menuToggle={handleMenuToggle}
+              onClick={() => setModalState(true)}
+            />
           </aside>
         </div>
       </header>

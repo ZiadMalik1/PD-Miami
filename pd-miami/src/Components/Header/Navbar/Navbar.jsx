@@ -3,8 +3,7 @@ import { Link } from "react-router-dom";
 import Button from "../../../UI/Button/Button";
 import classes from "./Navbar.module.scss";
 
-const Navbar = ({ isMenu, menuToggle }) => {
-  console.log(isMenu);
+const Navbar = ({ isMenu, menuToggle, onClick }) => {
   const [click, setClick] = useState(false);
   const [button, setButton] = useState(true);
 
@@ -41,7 +40,7 @@ const Navbar = ({ isMenu, menuToggle }) => {
             <Link to="/learn-more">Learn More</Link>
           </li>
         </ul>
-        <Button to="/donate" className={classes.booknow} onClick={menuToggle}>
+        <Button className={classes.booknow} onClick={onClick}>
           Donate
         </Button>
       </nav>

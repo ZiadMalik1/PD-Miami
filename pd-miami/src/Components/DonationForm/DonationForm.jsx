@@ -4,9 +4,6 @@ import classes from "./DonationForm.module.scss";
 const DonationForm = () => {
   return (
     <div className={classes.donation__container__donation__box}>
-      <div className={classes.donation__container__donation__box__title}>
-        Donation Information
-      </div>
       <div className={classes.donation__container__donation__box__fields}>
         <input type="text" id="firstName" placeholder="First Name"></input>
         <input type="text" id="lastName" placeholder="Last Name"></input>
@@ -47,7 +44,7 @@ const DonationForm = () => {
         className={classes.donation__container__donation__box__confirm}
       ></div>
       <div className={classes.donation__container__donation__box__donateButton}>
-        <i className="fa fa-credit-card"></i> Donate Now
+        Donate Now
       </div>
     </div>
   );
