@@ -81,9 +81,7 @@ const Locations = ({ page }) => {
     <div className={classes.container}>
       <div className={`${classes.locations} ${page ? classes.page : ""}`}>
         <div className={classes.locations__content}>
-          <h2 className={classes.locations__content__title}>
-            Recent Collaborations
-          </h2>
+          <h2 className={classes.locations__content__title}>Partners</h2>
           <div className={classes.locations__content__gallery}>
             {mapData.map(({ id, location, isFeatured, link, img, icon }) => (
               <div

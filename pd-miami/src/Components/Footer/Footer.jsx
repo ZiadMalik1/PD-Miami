@@ -14,30 +14,18 @@ import classes from "./Footer.module.scss";
 const footerColumns = [
   {
     id: 1,
-    headline: "About us",
-    links: [
-      "Pricing",
-      "Our Story",
-      "Testimonials",
-      "Investors",
-      "Terms of Service",
-    ],
+    headline: "Who we are",
+    links: ["About us"],
   },
   {
     id: 2,
-    headline: "Contact us",
-    links: ["Contact", "Support", "Destinations", "Careers", "Refund Policy"],
+    headline: "Get in Touch",
+    links: ["Contact us"],
   },
   {
     id: 3,
     headline: "Content",
-    links: [
-      "Submit Video",
-      "Submit Photo",
-      "Influencer",
-      "Marketing",
-      "Privacy Policy",
-    ],
+    links: ["Submit Photos", "Submit Videos", "Marketing"],
   },
   {
     id: 4,
@@ -59,6 +47,20 @@ const Footer = () => {
     <>
       <div className={classes.container}>
         <footer className={classes.footer}>
+          <div className={classes.footer__newsletter}>
+            <h4 className={classes.footer__newsletter__headline}>
+              Join us in our mission to make downtown Miami a better place
+            </h4>
+            <span>Unsubscribe at any time.</span>
+            <div className={classes.footer__newsletter__form}>
+              <input
+                className={classes.input}
+                type="email"
+                placeholder="Your Email"
+              />
+              <Button>Subscribe</Button>
+            </div>
+          </div>
           <div className={classes.footer__content}>
             {footerColumns.map(({ id, headline, links }) => (
               <div className={classes.footer__content__col} key={id}>
