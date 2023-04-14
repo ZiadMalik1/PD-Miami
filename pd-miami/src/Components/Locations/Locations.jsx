@@ -1,6 +1,7 @@
 import React from "react";
 import { BsArrowRight } from "react-icons/bs";
 import { IoLocationOutline } from "react-icons/io5";
+import { FaTooth } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import classes from "./Locations.module.scss";
 
