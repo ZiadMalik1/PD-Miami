@@ -23,7 +23,7 @@ const StripeContainer = ({ amount }) => {
 
   useEffect(() => {
     // Create PaymentIntent as soon as the page loads
-    fetch("http://localhost:4242/create-payment-intent", {
+    fetch("http://159.89.80.103/create-payment-intent", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ items: { amount: amount } }),
