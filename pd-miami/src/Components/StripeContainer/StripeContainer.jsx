@@ -23,8 +23,9 @@ const StripeContainer = ({ amount }) => {
 
   useEffect(() => {
     // Create PaymentIntent as soon as the page loads
-    fetch("http://159.89.80.103/create-payment-intent", {
+    fetch("https://api.pdmiami.org/create-payment-intent", {
       method: "POST",
+      mode: 'cors',
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ items: { amount: amount } }),
     })
