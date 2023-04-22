@@ -110,7 +110,7 @@ const PaymentForm = () => {
           </form>
         ) : (
           <div>
-            <h2>You Just Bought a Sweet Spatula!</h2>
+            <h2>Thank you for youe </h2>
           </div>
         )}
       </div>

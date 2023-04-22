@@ -6,6 +6,7 @@ import Header from "./components/Header/Header";
 import Home from "./pages/Home";
 import LearnMore from "./pages/LearnMore/LearnMore";
 import LocationsPage from "./pages/LocationsPage";
+import PaymentSuccess from "./pages/PaymentSuccess/PaymentSuccess";
 
 const App = () => {
   const [modalState, setModalState] = useState(false);
@@ -23,6 +24,7 @@ const App = () => {
         />
         <Route path="/learn-more" exact element={<LearnMore />} />
         <Route path="/locations" exact element={<LocationsPage />} />
+        <Route path="/success" element={<PaymentSuccess />} />
       </Routes>
       <Footer />
     </>
