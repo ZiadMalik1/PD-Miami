@@ -13,9 +13,9 @@ const Home = ({ modalState, setModalState }) => {
           <Modal onCloseRequest={() => setModalState(false)}>
             <h1
               style={{
-                fontFamily: "Roboto",
+                fontFamily: "Raleway",
                 fontSize: "22px",
-                margin: "2px",
+                margin: "7px 5px 2px",
                 fontWeight: "300",
               }}
             >
