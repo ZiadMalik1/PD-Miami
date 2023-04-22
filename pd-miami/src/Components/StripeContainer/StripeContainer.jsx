@@ -25,7 +25,7 @@ const StripeContainer = ({ amount }) => {
     // Create PaymentIntent as soon as the page loads
     fetch("https://api.pdmiami.org/create-payment-intent", {
       method: "POST",
-      mode: 'cors',
+      mode: "cors",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ items: { amount: amount } }),
     })

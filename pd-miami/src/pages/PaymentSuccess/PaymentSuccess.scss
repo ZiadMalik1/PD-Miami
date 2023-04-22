@@ -1,8 +1,11 @@
+@import './../../styles/variables.scss';
+
 .container {
     display: flex;
     height: 50vh;
     align-items: center;
     justify-content: center;
+    color: $light;
     width: 100%;
 
     .message-container {

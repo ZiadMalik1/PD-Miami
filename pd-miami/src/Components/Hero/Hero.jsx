@@ -1,3 +1,4 @@
+import CheckCircleTwoToneIcon from "@mui/icons-material/CheckCircleTwoTone";
 import React from "react";
 import Button from "../../UI/Button/Button";
 import bannerImg from "../../assets/images/Background_3.jpg";
@@ -36,8 +37,16 @@ const LearnPageContent = () => {
     </>
   );
 };
+const Content = ({ children }) => {
+  console.log(children);
+  return (
+    <>
+      <div>{children}</div>
+    </>
+  );
+};
 
-const HeroSection = ({ pageName, onClick }) => {
+const HeroSection = ({ pageName, onClick, children }) => {
   return (
     <>
       <div className={classes.container}>
@@ -46,6 +55,7 @@ const HeroSection = ({ pageName, onClick }) => {
           <div className={classes.hero__content}>
             {!pageName && <HomePageContent onClick={onClick} />}
             {pageName === "learn" && <LearnPageContent />}
+            {children && <Content children={children} />}
           </div>
         </div>
       </div>
