@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Route, Routes } from "react-router-dom";
+import { Route, Routes, Navigate } from "react-router-dom";
 import "./App.scss";
 import Footer from "./components/Footer/Footer";
 import Header from "./components/Header/Header";
@@ -14,7 +14,7 @@ const App = () => {
   return (
     <>
       <Header modalState={modalState} setModalState={setModalState} />
-      <Routes basename>
+      <Routes>
         <Route
           path="/"
           exact
