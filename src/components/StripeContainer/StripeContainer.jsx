@@ -11,6 +11,9 @@ const StripeContainer = ({ amount }) => {
   const [clientSecret, setClientSecret] = useState("");
   const appearance = {
     theme: "stripe",
+    variables: {
+      colorPrimary: "#303655",
+    },
   };
 
   const options = {
