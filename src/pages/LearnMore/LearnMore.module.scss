@@ -1,0 +1,108 @@
+@import "./../../styles/variables.scss";
+
+.container {
+    background: $light;
+    position: relative;
+    z-index: 10;
+    margin: 0 auto;
+}
+
+.photos {
+    width: 100%;
+    padding: 100px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &__content {
+        margin: 0 1.5rem;
+        width: 1000px;
+        display: flex;
+        flex-direction: column;
+
+        &__title {
+            color: $dark;
+            font-size: 2rem;
+            letter-spacing: $letterSpacing;
+            font-weight: 900;
+            position: relative;
+            margin-bottom: $spacing-xl;
+
+            &::after {
+                content: "";
+                position: absolute;
+                display: inline;
+                top: 15px;
+                right: 0;
+                width: calc(100% - 220px);
+                height: 2px;
+                background: $dark;
+            }
+        }
+
+        &__gallery {
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-auto-rows: auto;
+            gap: $spacing-xl;
+            margin-bottom: $spacing-xl;
+
+            @include breakpoint(sm) {
+                grid-template-columns: repeat(2, 1fr);
+                grid-auto-rows: auto;
+            }
+
+
+            &__learn {
+                display: flex;
+                width: 100%;
+                align-items: flex-start;
+                justify-content: flex-start;
+                flex-direction: column;
+
+                &__title {
+                    display: flex;
+                    flex-direction: column;
+                    margin-bottom: $spacing-sm;
+
+                    h2 {
+                        color: $dark;
+                        font-size: 2rem;
+                        letter-spacing: $letterSpacing;
+                        font-weight: 900;
+                        position: relative;
+                        margin-bottom: $spacing-md;
+                    }
+
+                    &__subtitle {
+                        color: $dark;
+                        font-size: 1rem;
+                        letter-spacing: $letterSpacing;
+                        font-weight: 900;
+                        position: relative;
+                        margin-bottom: $spacing-xs;
+                    }
+
+                    &__button {
+                        margin: 1.5rem 0;
+                    }
+
+                }
+
+
+            }
+
+            &__slideshow {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 100%;
+                height: 100%;
+                margin: 1rem 0 0.5rem 0;
+            }
+
+
+        }
+    }
+
+}
