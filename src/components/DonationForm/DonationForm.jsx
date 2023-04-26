@@ -42,6 +42,7 @@ const DonationForm = () => {
                 className={
                   classes.donation__container__donation__box__amount__button
                 }
+                onClick={() => setDonationAmount(10)}
               >
                 $10
               </div>
@@ -49,6 +50,7 @@ const DonationForm = () => {
                 className={
                   classes.donation__container__donation__box__amount__button
                 }
+                onClick={() => setDonationAmount(20)}
               >
                 $20
               </div>
