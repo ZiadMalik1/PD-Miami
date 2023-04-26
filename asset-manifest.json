@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.2ea2643a.css",
-    "main.js": "/static/js/main.a63b4a7d.js",
+    "main.css": "/static/css/main.1fd132a1.css",
+    "main.js": "/static/js/main.a2502b2e.js",
     "static/media/3.jpg": "/static/media/3.4803c207ac2dfb6df0c9.jpg",
     "static/media/Background_4.jpg": "/static/media/Background_4.87750242597da38b1c4e.jpg",
     "static/media/ChangeMakers.jpg": "/static/media/ChangeMakers.709132f0966330db17a7.jpg",
@@ -14,14 +14,14 @@
     "static/media/PreDental.PNG": "/static/media/PreDental.f0faebe8be370c661e4b.PNG",
     "static/media/Background_3.jpg": "/static/media/Background_3.9e18dcfcd5c1b9deadbe.jpg",
     "static/media/Heal.JPG": "/static/media/Heal.2ce46acbfb851ebfbe0c.JPG",
-    "static/media/Logo.png": "/static/media/Logo.b2b235483f38d758593f.png",
+    "static/media/Logo.png": "/static/media/Logo.60b7545aec39dddc08a3.png",
     "static/media/southbanklt-webfont.woff": "/static/media/southbanklt-webfont.74430eab742378fde2d3.woff",
     "index.html": "/index.html",
-    "main.2ea2643a.css.map": "/static/css/main.2ea2643a.css.map",
-    "main.a63b4a7d.js.map": "/static/js/main.a63b4a7d.js.map"
+    "main.1fd132a1.css.map": "/static/css/main.1fd132a1.css.map",
+    "main.a2502b2e.js.map": "/static/js/main.a2502b2e.js.map"
   },
   "entrypoints": [
-    "static/css/main.2ea2643a.css",
-    "static/js/main.a63b4a7d.js"
+    "static/css/main.1fd132a1.css",
+    "static/js/main.a2502b2e.js"
   ]
 }
