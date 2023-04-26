@@ -2,6 +2,8 @@ import React from "react";
 import Button from "../Button/Button";
 import "./Amount.scss";
 
+//Commit
+
 const Amount = ({ setAmount }) => {
   const setDonationAmount = (amount) => {
     setAmount(amount);
