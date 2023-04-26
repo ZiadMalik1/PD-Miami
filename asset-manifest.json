@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.d8aec75c.css",
-    "main.js": "/static/js/main.b6a11b1d.js",
+    "main.js": "/static/js/main.762ce1aa.js",
     "static/media/3.jpg": "/static/media/3.4803c207ac2dfb6df0c9.jpg",
     "static/media/Background_4.jpg": "/static/media/Background_4.87750242597da38b1c4e.jpg",
     "static/media/ChangeMakers.jpg": "/static/media/ChangeMakers.709132f0966330db17a7.jpg",
@@ -18,10 +18,10 @@
     "static/media/southbanklt-webfont.woff": "/static/media/southbanklt-webfont.74430eab742378fde2d3.woff",
     "index.html": "/index.html",
     "main.d8aec75c.css.map": "/static/css/main.d8aec75c.css.map",
-    "main.b6a11b1d.js.map": "/static/js/main.b6a11b1d.js.map"
+    "main.762ce1aa.js.map": "/static/js/main.762ce1aa.js.map"
   },
   "entrypoints": [
     "static/css/main.d8aec75c.css",
-    "static/js/main.b6a11b1d.js"
+    "static/js/main.762ce1aa.js"
   ]
 }
