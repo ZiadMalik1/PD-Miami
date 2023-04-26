@@ -1,7 +1,7 @@
-import React, { useState, useEffect } from "react";
-import PaymentForm from "../PaymentForm/PaymentForm";
-import { loadStripe } from "@stripe/stripe-js";
 import { Elements } from "@stripe/react-stripe-js";
+import { loadStripe } from "@stripe/stripe-js";
+import React, { useEffect, useState } from "react";
+import PaymentForm from "../PaymentForm/PaymentForm";
 
 const PUBLIC_KEY =
   "pk_test_51MXt1XIAh3j0XzoY7kp4d6ZlfhjieXigaJDHpP5FpjShpvZFn1gb0yqShCRzPATH0xvSPaNvaWRnw3H2uUDcCsJc00xk8SBLKF";
@@ -19,6 +19,7 @@ const StripeContainer = ({ amount }) => {
   const options = {
     clientSecret,
     appearance,
+    loader: "always",
   };
 
   useEffect(() => {
@@ -36,7 +37,11 @@ const StripeContainer = ({ amount }) => {
   return (
     <>
       {clientSecret && (
-        <Elements options={options} stripe={stripeTestPromise}>
+        <Elements
+          options={options}
+          stripe={stripeTestPromise}
+          aggresiveRendering
+        >
           <PaymentForm />
         </Elements>
       )}
