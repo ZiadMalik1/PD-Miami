@@ -11,7 +11,7 @@ form {
   height: auto;
   align-self: center;
 
-  button {
+  #submit {
     background: rgba($dark, 0.9);
     font-family: 'Raleway', sans-serif;
     color: white;
@@ -27,11 +27,11 @@ form {
     width: 100%;
   }
 
-  button:hover {
+  #submit:hover {
     filter: contrast(115%);
   }
 
-  button:disabled {
+  #submit:disabled {
     opacity: 0.5;
     cursor: default;
   }
