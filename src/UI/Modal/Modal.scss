@@ -59,7 +59,7 @@
         padding: 3rem 2rem 2rem;
         border-radius: 1rem 1rem 0 0;
         transition: all .3s;
-        max-height: calc(100vh - 100px);
+        max-height: calc(100vh);
         overflow-y: auto;
 
         /*=== Effect 1 ===*/
@@ -123,6 +123,13 @@
             margin: auto;
             width: 380px;
             border-radius: 1.25rem;
+
+        }
+    }
+
+    @media screen and (max-width: 576px) {
+        .modal__content {
+            max-height: calc(100vh - 300px);
         }
     }
 }
