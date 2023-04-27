@@ -1,10 +1,14 @@
-import React, { useEffect, useRef, useCallback } from "react";
-import isNil from "lodash/fp/isNil";
 import PropTypes from "prop-types";
-import classes from "./Modal.module.scss";
+import React, { useCallback, useEffect, useRef } from "react";
+import "./Modal.scss";
 
-const Modal = ({ onCloseRequest, children }) => {
+const Modal = ({ onCloseRequest, modalState, children }) => {
   const modal = useRef(null);
+
+  const handleClick = (event) => {
+    onCloseRequest();
+    event.stopPropagation();
+  };
 
   const handleKeyUp = useCallback(
     (e) => {
@@ -25,25 +29,29 @@ const Modal = ({ onCloseRequest, children }) => {
 
   useEffect(() => {
     window.addEventListener("keyup", handleKeyUp, false);
-
     return () => {
       window.removeEventListener("keyup", handleKeyUp, false);
     };
   }, [handleKeyUp]);
 
   return (
-    <div className={classes.modalOverlay} onClick={onCloseRequest}>
-      <div
-        className={classes.modalOverlay__modal}
-        ref={modal}
-        onClick={(e) => e.stopPropagation()}
-      >
-        <button
-          type="button"
-          className={classes.modalOverlay__modal__closeButton}
-          onClick={onCloseRequest}
-        />
+    <div
+      className={`modal__container ${modalState ? "show-modal" : ""}`}
+      id="modal-container"
+      ref={modal}
+      onClick={(e) => handleClick}
+    >
+      <div className="modal__content">
+        <div className="modal__close close-modal" title="Close">
+          <i className="bx bx-x"></i>
+        </div>
         {children}
+        <button
+          className="modal__button-link close-modal"
+          onClick={onCloseRequest}
+        >
+          Close
+        </button>
       </div>
     </div>
   );

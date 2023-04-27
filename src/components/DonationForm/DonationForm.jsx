@@ -1,10 +1,8 @@
-import React, { useState } from "react";
+import React from "react";
 import StripeContainer from "../StripeContainer/StripeContainer";
 import classes from "./DonationForm.module.scss";
 
-const DonationForm = () => {
-  const [donation, setDonation] = useState({ amount: 0, setAmount: false });
-
+const DonationForm = ({ donation, setDonation }) => {
   const setDonationAmount = (amount) => {
     const donationAmount = Number(amount);
     if (donationAmount > 0) {
