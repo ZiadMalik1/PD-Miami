@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Route, Routes, Navigate } from "react-router-dom";
+import { Route, Routes } from "react-router-dom";
 import "./App.scss";
 import Footer from "./components/Footer/Footer";
 import Header from "./components/Header/Header";
@@ -9,17 +9,23 @@ import LocationsPage from "./pages/LocationsPage";
 import PaymentSuccess from "./pages/PaymentSuccess/PaymentSuccess";
 
 const App = () => {
-  const [modalState, setModalState] = useState(false);
+  const [donationModalState, setDonationModalState] = useState(false);
 
   return (
     <>
-      <Header modalState={modalState} setModalState={setModalState} />
+      <Header
+        modalState={donationModalState}
+        setModalState={setDonationModalState}
+      />
       <Routes>
         <Route
           path="/"
           exact
           element={
-            <Home modalState={modalState} setModalState={setModalState} />
+            <Home
+              modalState={donationModalState}
+              setModalState={setDonationModalState}
+            />
           }
         />
         <Route path="/learn-more" exact element={<LearnMore />} />
