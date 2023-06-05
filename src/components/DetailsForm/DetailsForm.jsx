@@ -29,6 +29,7 @@ const DetailsForm = ({ setDonationAmount }) => {
   };
 
   const handleCustomChange = (event) => {
+    console.log(event.target.value);
     setAmount(event.target.value);
   };
 
@@ -80,7 +81,7 @@ const DetailsForm = ({ setDonationAmount }) => {
               <input
                 type="text"
                 className="input-field"
-                onChange={() => handleCustomChange}
+                onChange={handleCustomChange}
               />
             </div>
           </div>
