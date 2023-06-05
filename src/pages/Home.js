@@ -18,17 +18,23 @@ const Home = ({ modalState, setModalState }) => {
           }}
           modalState={modalState}
         >
-          <h1
+          <div
             style={{
-              fontFamily: "Raleway",
-              fontSize: "22px",
-              margin: "7px 5px 2px",
-              fontWeight: "300",
+              display: "flex",
+              flexDirection: "column",
             }}
           >
-            Donation Form
-          </h1>
-          <DonationForm donation={donation} setDonation={setDonation} />
+            <h1
+              style={{
+                fontFamily: "Raleway",
+                fontSize: "22px",
+                fontWeight: "300",
+              }}
+            >
+              Donation Form
+            </h1>
+            <DonationForm donation={donation} setDonation={setDonation} />
+          </div>
         </Modal>
 
         <Hero

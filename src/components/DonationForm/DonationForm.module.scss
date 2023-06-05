@@ -1,12 +1,18 @@
 @import "./../../styles/variables.scss";
 
 
+.details__container {
+    display: flex;
+    margin: 3rem 0 5rem;
+    width: 100%;
+}
+
 .donation__container {
     display: flex;
     flex-direction: column;
     justify-content: center;
     height: auto;
-    padding: 20px 5px;
+    padding: 0px 5px;
     width: auto;
     font-weight: 500;
     font-size: 12px;
@@ -14,6 +20,12 @@
 
     @media (max-width: 576px) {
         height: auto;
+    }
+
+    &__details__container {
+        display: flex;
+        justify-self: center;
+        align-self: center;
     }
 
     &__donation__box {
@@ -117,7 +129,7 @@
             &__button {
                 width: 100%;
                 background-color: gray;
-                margin-bottom: 10px;
+                margin-bottom: 0px;
                 text-align: center;
                 color: white;
                 padding: 15px 0px 15px 0px;
@@ -152,7 +164,7 @@
             }
 
             &__button:not(:first-child) {
-                margin: 25px 0;
+                margin: 5px 0;
             }
 
             &__button:hover {
