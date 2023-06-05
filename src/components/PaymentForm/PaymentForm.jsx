@@ -98,11 +98,7 @@ const PaymentForm = () => {
             />
             <button disabled={isLoading || !stripe || !elements} id="submit">
               <span id="button-text">
-                {isLoading ? (
-                  <div className="spinner" id="spinner"></div>
-                ) : (
-                  "Pay now"
-                )}
+                {isLoading ? <div id="loading"></div> : "Pay now"}
               </span>
             </button>
             {/* Show any error or success messages */}
