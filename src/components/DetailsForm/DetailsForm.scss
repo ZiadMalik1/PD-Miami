@@ -78,16 +78,26 @@
 
     &__donateButton {
         margin: 1rem 0 0rem;
-        background: rgba($dark, 0.9);
+        background-color: rgba($dark, 0.9);
         width: 100%;
         color: white;
         text-align: center;
         padding: 12px 16px;
-        box-shadow: 0px 4px 5.5px 0px rgba(0, 0, 0, 0.07);
         font-size: 18px;
         cursor: pointer;
         font-weight: 800;
         align-self: center;
+        transition: opacity 0.3s ease;
+
+        &.active {
+            opacity: 1;
+            cursor: pointer;
+        }
+
+        &.disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+        }
     }
 
     &__donateButton:hover {
@@ -154,7 +164,7 @@
         margin: 1.6em 0 0.3em 0.2em;
     }
 
-    input[type="text"] {
+    input {
         text-align: left;
         font-family: 'Lato';
         background-color: rgba(26, 68, 139, 0.3);
@@ -168,27 +178,6 @@
         width: 100%;
         border-radius: 3px;
         outline: none;
-    }
-
-    button {
-        background-color: #2dbb55;
-        border-color: #2dbb55;
-        font-size: 1.2em;
-        margin-top: 1.2em;
-        transition: all 0.2s ease;
-
-        &:hover,
-        &:focus {
-            //background-color: red;
-            -ms-transform: scale(1.04, 1.04);
-            /* IE 9 */
-            -webkit-transform: scale(1.04, 1.04);
-            /* Safari */
-            transform: scale(1.04, 1.04);
-            -webkit-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2);
-            -moz-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2);
-            box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2);
-        }
     }
 
 

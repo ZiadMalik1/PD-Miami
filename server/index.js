@@ -18,7 +18,7 @@ app.use(express.json());
 app.use(cors());
 
 const getAmount = (amount) => {
-  return amount.amount * 100;
+  return Math.round(amount.amount * 100);
 };
 
 app.post("/create-payment-intent", cors(), async (req, res) => {

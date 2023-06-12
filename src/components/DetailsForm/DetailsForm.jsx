@@ -1,16 +1,45 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
+
 import "./DetailsForm.scss";
 
 const DetailsForm = ({ setDonationAmount }) => {
   const [amount, setAmount] = useState(null);
+  const [isFormReady, setIsFormReady] = useState(false);
+  const [firstName, setFirstName] = useState(null);
+  const [lastName, setLastName] = useState(null);
+  const [email, setEmail] = useState(null);
+  const [customAmountInput, setCustomAmountInput] = useState("");
   const [selected, setSelected] = useState([
     { id: 1, selected: false },
     { id: 2, selected: false },
     { id: 3, selected: false },
   ]);
 
+  useEffect(() => {
+    if (email && firstName && lastName && amount) {
+      setIsFormReady(true);
+    } else {
+      setIsFormReady(false);
+    }
+  }, [email, firstName, lastName, amount]);
+
+  const handleEmailChange = (event) => {
+    setEmail(event.target.value);
+  };
+
+  const handleFirstNameChange = (event) => {
+    setFirstName(event.target.value);
+  };
+
+  const handleLastNameChange = (event) => {
+    setLastName(event.target.value);
+  };
+
   const handleChange = (changeObject) => {
-    if (changeObject.id !== 3) setAmount(changeObject.amount);
+    if (changeObject.id !== 3) {
+      setAmount(changeObject.amount);
+      setCustomAmountInput("");
+    }
     setSelected(
       selected.map((obj) => {
         if (obj.id === changeObject.id) {
@@ -28,13 +57,52 @@ const DetailsForm = ({ setDonationAmount }) => {
     );
   };
 
+  const handleCustomClick = () => {
+    setAmount(null);
+  };
+
   const handleCustomChange = (event) => {
-    console.log(event.target.value);
-    setAmount(event.target.value);
+    const value = event.target.value;
+    setCustomAmountInput(value);
+    const parsedValue = parseFloat(value.replace(/[^\d.-]/g, ""));
+    if (!isNaN(parsedValue)) {
+      // Perform the desired action with the parsed amount
+      setAmount(parsedValue);
+    } else {
+      setAmount(null);
+    }
+  };
+
+  const handleCustomBlur = () => {
+    convertToDollarAmount();
+  };
+
+  const convertToDollarAmount = () => {
+    const numericValue = parseFloat(customAmountInput).toFixed(2);
+    if (!isNaN(numericValue)) {
+      const formattedAmount = numericValue.toLocaleString("en-US", {
+        style: "decimal",
+        minimumFractionDigits: 2,
+        maximumFractionDigits: 2,
+      });
+
+      const amountWithoutSymbol = formattedAmount.replace(/[$,]/g, ""); // Remove currency symbol and commas
+      setCustomAmountInput(amountWithoutSymbol);
+      setAmount(numericValue);
+      console.log(amount);
+    } else {
+      setCustomAmountInput("");
+    }
   };
 
   const handleSubmit = () => {
-    setDonationAmount(amount);
+    if (isFormReady) {
+      setDonationAmount(amount);
+      console.log("Form submitted");
+    } else {
+      // Form is not ready for submission
+      console.log("Form not ready");
+    }
   };
 
   return (
@@ -61,7 +129,7 @@ const DetailsForm = ({ setDonationAmount }) => {
                 ? "__selected"
                 : ""
             }`}
-            onClick={() => handleChange({ id: 2, amount: 10 })}
+            onClick={() => handleChange({ id: 2, amount: 20 })}
           >
             <span>$20.00</span>
           </div>
@@ -80,8 +148,11 @@ const DetailsForm = ({ setDonationAmount }) => {
               <span className="dollar-sign">$</span>
               <input
                 type="text"
+                value={customAmountInput}
                 className="input-field"
+                onClick={handleCustomClick}
                 onChange={handleCustomChange}
+                onBlur={handleCustomBlur}
               />
             </div>
           </div>
@@ -91,15 +162,27 @@ const DetailsForm = ({ setDonationAmount }) => {
             <form className="clearfix">
               <div className="input-group-2">
                 <label>First Name</label>
-                <input type="text" required />
+                <input
+                  type="text"
+                  value={firstName}
+                  onChange={handleFirstNameChange}
+                />
               </div>
               <div className="input-group-2">
                 <label>Last Name</label>
-                <input type="text" />
+                <input
+                  type="text"
+                  value={lastName}
+                  onChange={handleLastNameChange}
+                />
               </div>
               <div className="input-group-1">
                 <label>Email Address</label>
-                <input type="text" />
+                <input
+                  type="email"
+                  value={email}
+                  onChange={handleEmailChange}
+                />
               </div>
               <div className="input-group-1">
                 <label>Street Address</label>
@@ -122,7 +205,9 @@ const DetailsForm = ({ setDonationAmount }) => {
         </div>
         <div
           type="submit"
-          className="form__donateButton"
+          className={`form__donateButton ${
+            isFormReady ? "active" : "disabled"
+          }`}
           onClick={() => handleSubmit()}
         >
           Next
