@@ -1,4 +1,3 @@
-import CheckCircleTwoToneIcon from "@mui/icons-material/CheckCircleTwoTone";
 import React from "react";
 import Button from "../../UI/Button/Button";
 import bannerImg from "../../assets/images/Background_3.jpg";
@@ -38,7 +37,6 @@ const LearnPageContent = () => {
   );
 };
 const Content = ({ children }) => {
-  console.log(children);
   return (
     <>
       <div>{children}</div>

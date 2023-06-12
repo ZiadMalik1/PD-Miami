@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useEffect, useState } from "react";
 
 import "./DetailsForm.scss";
 
@@ -161,7 +161,9 @@ const DetailsForm = ({ setDonationAmount }) => {
           <div className="contact-info">
             <form className="clearfix">
               <div className="input-group-2">
-                <label>First Name</label>
+                <label>
+                  First Name<span class="required-notation">*</span>
+                </label>
                 <input
                   type="text"
                   value={firstName}
@@ -169,7 +171,9 @@ const DetailsForm = ({ setDonationAmount }) => {
                 />
               </div>
               <div className="input-group-2">
-                <label>Last Name</label>
+                <label>
+                  Last Name<span class="required-notation">*</span>
+                </label>
                 <input
                   type="text"
                   value={lastName}
@@ -177,7 +181,9 @@ const DetailsForm = ({ setDonationAmount }) => {
                 />
               </div>
               <div className="input-group-1">
-                <label>Email Address</label>
+                <label>
+                  Email Address<span class="required-notation">*</span>
+                </label>
                 <input
                   type="email"
                   value={email}

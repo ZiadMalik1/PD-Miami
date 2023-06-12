@@ -162,6 +162,15 @@
         text-transform: uppercase;
         letter-spacing: 0.2em;
         margin: 1.6em 0 0.3em 0.2em;
+
+        .required-notation {
+            font-size: 15px;
+            font-weight: 900;
+            margin-left: 3px;
+            /* Add spacing between the label and the required notation */
+            color: #FF7F7F;
+            /* Customize the color of the required notation */
+        }
     }
 
     input {
