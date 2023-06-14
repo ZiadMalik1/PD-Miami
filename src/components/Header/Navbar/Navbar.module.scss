@@ -5,6 +5,7 @@
     height: 100%;
     display: none;
     align-items: center;
+    font-family: 'Open Sans', sans-serif;
 
 
     ul {
@@ -26,7 +27,7 @@
                 font-size: 1.1rem;
                 letter-spacing: $letterSpacing;
                 text-decoration: none;
-                color: $white;
+                color: #F5F5F5;
                 position: relative;
 
                 &::after {
@@ -37,7 +38,7 @@
                     bottom: 0;
                     left: 0;
                     right: 0;
-                    background: $white;
+                    background: rgba(255, 255, 255, 0.8);
                     opacity: 0;
                     transition: 0.3s ease opacity;
                 }
@@ -47,7 +48,7 @@
                 }
 
                 &:hover {
-                    color: $white;
+                    color: rgba(255, 255, 255, 0.8);
                 }
             }
         }
@@ -77,10 +78,10 @@
 
             a {
                 text-decoration: none;
-                color: $white;
+                color: #F5F5F5;
 
                 &:hover {
-                    color: $white
+                    color: #F5F5F5
                 }
             }
         }

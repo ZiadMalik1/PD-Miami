@@ -6,7 +6,7 @@
     outline: none;
     border-radius: $borderRadius;
     padding: $spacing-sm $spacing-lg;
-    font-family: inherit;
+    font-family: 'Montserrat', sans-serif;
     font-weight: 700;
     letter-spacing: $letterSpacing;
     font-size: 1.1rem;
@@ -16,7 +16,7 @@
     transition: all 0.3s ease;
 
     &:hover {
-        background: rgab($light, 0.8s);
+        background: #c9d6de
     }
 
     &.outline {
@@ -36,21 +36,23 @@
     outline: none;
     border-radius: $borderRadius;
     padding: $spacing-sm $spacing-lg;
-    font-family: inherit;
+    font-family: 'Montserrat', sans-serif;
     font-weight: 700;
     letter-spacing: $letterSpacing;
     font-size: 1.1rem;
-    background: $dark;
-    color: $light;
-    border: 1px solid $dark;
+    background-color: #07384D;
+    /* Button background color */
+    color: #FFFFFF;
+    /* Button text color */
+    border: 1px solid #CCCCCC;
     transition: all 0.3s ease;
 
     &:hover {
-        background: rgab($dark, 0.8s);
+        background-color: #0B4E6E;
     }
 
     &.outline {
-        border: 1px solid $dark;
+        border: 1px solid #CCCCCC;
         background: transparent;
         color: $dark;
 

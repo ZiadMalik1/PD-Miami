@@ -7,12 +7,12 @@ const HomePageContent = ({ onClick }) => {
   return (
     <>
       <span className={classes.hero__content__tagline}>
-        Giving back to our community
+        Empowering Communities Through Compassion
       </span>
       <h1 className={classes.hero__content__title}>Project Downtown Miami</h1>
       <p className={classes.hero__content__description}>
-        Coming together to provide services for the betterment of the
-        underserved community in Miami, FL
+        Be the change Downtown Miami needs. Join us in the fight against food
+        insecurity. Your support matters.
       </p>
       <div className={classes.hero__content__cta}>
         <Button onClick={onClick}>Donate</Button>

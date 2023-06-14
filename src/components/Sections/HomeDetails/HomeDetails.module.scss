@@ -3,7 +3,8 @@
   padding: 5rem 2rem 3rem;
   justify-content: center;
   align-items: center;
-  background: #f5f5f5;
+  background: #F8F8F8;
+  font-family: 'Roboto', sans-serif;
   color: #333333;
 
   &__container {
@@ -26,23 +27,26 @@
       text-align: center;
 
       h2 {
-        font-size: 26px;
+        font-size: 28px;
         margin: 3px 0 12px 0;
-        font-weight: bold;
+        font-weight: 500;
         color: #000000;
+        line-height: 33px;
       }
 
       h5 {
         font-size: 16px;
+        font-weight: 300;
         margin: 0 0 5px 0;
       }
 
       p {
         font-size: 16px;
-        margin: 5px 0 30px 0;
+        margin: 5px 0 35px 0;
+        font-weight: light;
+        padding: 0 1rem;
         color: #666666;
         line-height: 22px;
-        width: 95%;
       }
     }
 
@@ -57,9 +61,9 @@
         text-align: end;
 
         h2 {
-          font-size: 36px;
-          margin: 3px 0 12px 0;
-          font-weight: bold;
+          font-size: 32px;
+          margin: 3px 0 8px 0;
+          font-weight: 400;
           color: #000000;
         }
 
@@ -70,6 +74,8 @@
         p {
           font-size: 20px;
           margin: 1rem 0 2rem 0;
+          line-height: 27px;
+          padding: 0;
         }
 
 

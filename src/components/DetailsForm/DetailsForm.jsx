@@ -89,7 +89,6 @@ const DetailsForm = ({ setDonationAmount }) => {
       const amountWithoutSymbol = formattedAmount.replace(/[$,]/g, ""); // Remove currency symbol and commas
       setCustomAmountInput(amountWithoutSymbol);
       setAmount(numericValue);
-      console.log(amount);
     } else {
       setCustomAmountInput("");
     }

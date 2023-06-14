@@ -14,13 +14,14 @@ const HomeDetails = () => {
         </div>
         <div className={classes.slideshow__section__container__content}>
           <h5>About Us</h5>
-          <h2>Battling Food Insecurity</h2>
+          <h2>Nourishing Downtown Miami Together</h2>
           <p>
-            We are a nonprofit organization that provides necessary services to
-            those who need it most in Downtown Miami, starting with providing
-            food to the homeless, and eventually, with your continuous support,
-            expanding to more significant and lasting services like clothing
-            drives, and hygiene product distribution.
+            Project Downtown Miami is a non-profit organization dedicated to
+            combating food insecurity in Downtown Miami. Through our efforts, we
+            provide essential meals to the homeless and less fortunate members
+            of our community. With the support of our passionate volunteers and
+            generous donors, we aim to expand our services and create a lasting
+            impact on those in need.
           </p>
           <Button alt>Host a Service</Button>
         </div>

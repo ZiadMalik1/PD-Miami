@@ -1,7 +1,7 @@
 @import "./../../styles/variables.scss";
 
 .container {
-    background: $light;
+    background: #C4D8E2;
     position: relative;
     z-index: 10;
     margin: 0 auto;
@@ -19,7 +19,7 @@
     }
 
     &__content {
-        margin: 0 1.5rem;
+        margin: 0 1.7rem;
         width: 1000px;
         display: flex;
         flex-direction: column;
@@ -28,6 +28,7 @@
             color: $dark;
             font-size: 2rem;
             letter-spacing: $letterSpacing;
+            font-family: "Roboto", sans-serif;
             font-weight: 900;
             position: relative;
             margin-bottom: $spacing-xl;
@@ -38,7 +39,7 @@
                 display: inline;
                 top: 15px;
                 right: 0;
-                width: calc(100% - 155px);
+                width: calc(100% - 150px);
                 height: 2px;
                 background: $dark;
             }
@@ -121,9 +122,18 @@
 
                     &__location {
                         margin-left: 8px;
-                        font-size: 1rem;
+                        font-size: 1.1rem;
+                        font-weight: 100;
                         color: $dark;
                         letter-spacing: $letterSpacing;
+                        font-family: 'Lato', sans-serif;
+                    }
+
+                    @media screen and (min-width: 768px) {
+
+                        &__location {
+                            font-size: 1.05rem;
+                        }
                     }
                 }
 
