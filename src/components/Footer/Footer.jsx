@@ -1,12 +1,6 @@
 import React from "react";
 
-import {
-  FaFacebook,
-  FaInstagram,
-  FaSnapchatGhost,
-  FaTwitter,
-  FaYoutube,
-} from "react-icons/fa";
+import { FaInstagram, FaLinkedin } from "react-icons/fa";
 import Button from "../../UI/Button/Button";
 import Logo from "../../UI/Logo/Logo";
 import classes from "./Footer.module.scss";
@@ -35,11 +29,14 @@ const footerColumns = [
 ];
 
 const socials = [
-  <FaYoutube />,
-  <FaInstagram />,
-  <FaTwitter />,
-  <FaSnapchatGhost />,
-  <FaFacebook />,
+  {
+    link: "https://www.linkedin.com/company/project-downtown-miami/",
+    icon: <FaLinkedin />,
+  },
+  {
+    link: "https://www.instagram.com/pd.miami/?hl=en",
+    icon: <FaInstagram />,
+  },
 ];
 
 const Footer = () => {
@@ -85,7 +82,9 @@ const Footer = () => {
             <ul className={classes.footer__base__socials}>
               {socials.map((icon, index) => (
                 <li key={index + 1}>
-                  <a href="/">{icon}</a>
+                  <a target="_blank" href={icon.link}>
+                    {icon.icon}
+                  </a>
                 </li>
               ))}
             </ul>
