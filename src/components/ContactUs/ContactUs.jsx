@@ -69,7 +69,7 @@ const ContactUs = () => {
               onChange={(e) => setMessage(e.target.value)}
               required
             ></textarea>
-            <Button type="submit">Send Message</Button>
+            <Button type="submit">Send</Button>
           </form>
         </div>
       </div>
