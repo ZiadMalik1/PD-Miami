@@ -4,7 +4,7 @@ import Modal from "../UI/Modal/Modal";
 import DonationForm from "../components/DonationForm/DonationForm";
 import Hero from "../components/Hero/Hero";
 import Locations from "../components/Locations/Locations";
-import HomeDetails from "../components/Sections/HomeDetails/HomeDetails";
+import Details from "../components/Sections/Details/Details";
 
 const Home = ({ modalState, setModalState }) => {
   const [donation, setDonation] = useState({ amount: 0, setAmount: false });
@@ -43,7 +43,7 @@ const Home = ({ modalState, setModalState }) => {
             setModalState(true);
           }}
         />
-        <HomeDetails />
+        <Details />
         <Locations />
       </div>
     </>

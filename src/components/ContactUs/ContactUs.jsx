@@ -1,8 +1,12 @@
 import emailjs from "@emailjs/browser";
-import React, { useRef } from "react";
+import React, { useRef, useState } from "react";
+import Button from "../../UI/Button/Button";
 import "./ContactUs.scss";
 
 const ContactUs = () => {
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [message, setMessage] = useState("");
   const form = useRef();
 
   const sendEmail = (e) => {
@@ -24,19 +28,19 @@ const ContactUs = () => {
           console.log(error.text);
         }
       );
+
+    setName("");
+    setEmail("");
+    setMessage("");
   };
 
   return (
     <>
-      <div className="contact--banner">
-        <div class="hero-text">
-          <h1>I am John Doe</h1>
-          <p>And I'm a Photographer</p>
-          <button>Hire me</button>
-        </div>
-      </div>
       <div className="contact--container">
-        <div className="contact-form">
+        <div className="heading">
+          <h2>Contact Us</h2>
+        </div>
+        <div className="contact--form">
           <form ref={form} onSubmit={sendEmail}>
             <label for="fname">Name</label>
             <input
@@ -44,16 +48,28 @@ const ContactUs = () => {
               id="fname"
               name="user_name"
               placeholder="Your name.."
+              value={name}
             />
-            <label>Email</label>
-            <input type="email" name="user_email" />
+
+            <label for="email">Email</label>
+            <input
+              type="email"
+              name="user_email"
+              id="email"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              required
+            />
+
             <label for="subject">Message</label>
             <textarea
               id="subject"
               name="message"
-              placeholder="Write something.."
-            />
-            <input type="submit" value="Send" />
+              value={message}
+              onChange={(e) => setMessage(e.target.value)}
+              required
+            ></textarea>
+            <Button type="submit">Send Message</Button>
           </form>
         </div>
       </div>

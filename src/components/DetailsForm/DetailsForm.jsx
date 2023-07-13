@@ -161,7 +161,7 @@ const DetailsForm = ({ setDonationAmount }) => {
             <form className="clearfix">
               <div className="input-group-2">
                 <label>
-                  First Name<span class="required-notation">*</span>
+                  First Name<span className="required-notation">*</span>
                 </label>
                 <input
                   type="text"
@@ -171,7 +171,7 @@ const DetailsForm = ({ setDonationAmount }) => {
               </div>
               <div className="input-group-2">
                 <label>
-                  Last Name<span class="required-notation">*</span>
+                  Last Name<span className="required-notation">*</span>
                 </label>
                 <input
                   type="text"
@@ -181,7 +181,7 @@ const DetailsForm = ({ setDonationAmount }) => {
               </div>
               <div className="input-group-1">
                 <label>
-                  Email Address<span class="required-notation">*</span>
+                  Email Address<span className="required-notation">*</span>
                 </label>
                 <input
                   type="email"

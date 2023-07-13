@@ -24,15 +24,20 @@ const HomePageContent = ({ onClick }) => {
   );
 };
 
-const LearnPageContent = () => {
+const LearnPageContent = ({ onClick }) => {
   return (
     <>
-      <span className={classes.hero__content__tagline}>Find out about us!</span>
+      <span className={classes.hero__content__tagline}>
+        Discover the Power of Community
+      </span>
       <h1 className={classes.hero__content__title}>Learn More</h1>
       <p className={classes.hero__content__description}>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere beatae
-        itaque ea ducimus, mollitia voluptate laudantium.
+        Unleashing Hope, Inspiring Change: Delve Deeper into the Remarkable
+        Story of Project Downtown Miami
       </p>
+      <div className={classes.hero__content__cta}>
+        <Button onClick={onClick}>Contact Us</Button>
+      </div>
     </>
   );
 };

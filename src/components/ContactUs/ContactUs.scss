@@ -1,0 +1,120 @@
+input[type=text],
+input[type=email],
+select,
+textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical;
+}
+
+input[type=submit] {
+    background-color: #04AA6D;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+input[type=submit]:hover {
+    background-color: #45a049;
+}
+
+
+.contact--container {
+    display: flex;
+    height: 30rem;
+    padding: 10rem;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border-radius: 5px;
+    background-color: #C4D8E2;
+    font-family: 'Roboto', sans-serif;
+
+    .heading {
+        flex-grow: 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 24px;
+        font-weight: 300;
+        width: 50vw;
+    }
+
+    .contact--form {
+        flex-grow: 2;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+
+        form {
+            margin: 0.75rem auto 0;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        input,
+        textarea {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        textarea {
+            resize: vertical;
+            min-height: 100px;
+        }
+
+        Button {
+            align-self: center;
+            justify-self: center;
+            margin: 1rem auto 0;
+            width: 60%;
+        }
+
+
+        /* Media queries for mobile responsiveness */
+        @media screen and (max-width: 480px) {
+
+            /* Styles for mobile */
+            form {
+                width: 75vw;
+                max-width: 100%;
+                padding: 1rem 0 0;
+            }
+
+
+            input,
+            textarea {
+                padding: 6px;
+            }
+
+            /* ... Rest of the mobile-specific styles ... */
+        }
+
+        @media screen and (min-width: 481px) {
+
+            /* Styles for desktop */
+            form {
+                width: 650px;
+                padding: 0 40px;
+            }
+
+            /* ... Rest of the desktop-specific styles ... */
+        }
+    }
+
+
+}
