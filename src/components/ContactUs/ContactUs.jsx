@@ -1,6 +1,8 @@
 import emailjs from "@emailjs/browser";
 import React, { useRef, useState } from "react";
+import { Element } from "react-scroll";
 import Button from "../../UI/Button/Button";
+
 import "./ContactUs.scss";
 
 const ContactUs = () => {
@@ -36,43 +38,46 @@ const ContactUs = () => {
 
   return (
     <>
-      <div className="contact--container">
-        <div className="heading">
-          <h2>Contact Us</h2>
-        </div>
-        <div className="contact--form">
-          <form ref={form} onSubmit={sendEmail}>
-            <label for="fname">Name</label>
-            <input
-              type="text"
-              id="fname"
-              name="user_name"
-              placeholder="Your name.."
-              value={name}
-            />
+      <Element name="sectionToScrollTo">
+        <div className="contact--container">
+          <div className="heading">
+            <h2>Contact Us</h2>
+          </div>
+          <div className="contact--form">
+            <form ref={form} onSubmit={sendEmail}>
+              <label for="fname">Name</label>
+              <input
+                type="text"
+                id="fname"
+                name="user_name"
+                placeholder="Your name..."
+                onChange={(e) => setName(e.target.value)}
+                value={name}
+              />
 
-            <label for="email">Email</label>
-            <input
-              type="email"
-              name="user_email"
-              id="email"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-              required
-            />
+              <label for="email">Email</label>
+              <input
+                type="email"
+                name="user_email"
+                id="email"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                required
+              />
 
-            <label for="subject">Message</label>
-            <textarea
-              id="subject"
-              name="message"
-              value={message}
-              onChange={(e) => setMessage(e.target.value)}
-              required
-            ></textarea>
-            <Button type="submit">Send</Button>
-          </form>
+              <label for="subject">Message</label>
+              <textarea
+                id="subject"
+                name="message"
+                value={message}
+                onChange={(e) => setMessage(e.target.value)}
+                required
+              ></textarea>
+              <Button type="submit">Send</Button>
+            </form>
+          </div>
         </div>
-      </div>
+      </Element>
     </>
   );
 };

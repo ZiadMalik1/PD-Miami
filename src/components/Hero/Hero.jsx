@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-scroll";
 import Button from "../../UI/Button/Button";
 import bannerImg from "../../assets/images/Background_3.jpg";
 import classes from "./Hero.module.scss";
@@ -36,7 +37,16 @@ const LearnPageContent = ({ onClick }) => {
         Story of Project Downtown Miami
       </p>
       <div className={classes.hero__content__cta}>
-        <Button onClick={onClick}>Contact Us</Button>
+        <Link
+          activeClass="active"
+          to="sectionToScrollTo"
+          spy={true}
+          smooth={true}
+          offset={-200} // Offset from the top when scrolling to the section (optional)
+          duration={200} // Scroll duration in milliseconds
+        >
+          <Button>Get in Touch</Button>
+        </Link>
       </div>
     </>
   );

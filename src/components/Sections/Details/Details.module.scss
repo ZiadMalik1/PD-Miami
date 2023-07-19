@@ -3,8 +3,8 @@
   padding: 5rem 2rem 3rem;
   justify-content: center;
   align-items: center;
-  background: #F8F8F8;
-  font-family: 'Roboto', sans-serif;
+  background: #f8f8f8;
+  font-family: "Roboto", sans-serif;
   color: #333333;
 
   &__container {
@@ -52,11 +52,9 @@
         color: #666666;
         line-height: 22px;
       }
-
     }
 
     &__homeContent {
-
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -89,12 +87,8 @@
       }
     }
 
-
     @media screen and (min-width: 768px) {
-
       width: 90%;
-
-
 
       &__learnContent {
         order: 1;
@@ -103,7 +97,6 @@
         text-align: left;
         align-items: start;
 
-
         h2 {
           font-size: 32px;
           margin: 3px 0 8px 0;
@@ -121,8 +114,6 @@
           line-height: 27px;
           padding: 0;
         }
-
-
       }
 
       &__homeContent {
@@ -131,7 +122,6 @@
         text-align: right;
         align-items: end;
 
-
         h2 {
           font-size: 32px;
           margin: 3px 0 8px 0;
@@ -149,22 +139,16 @@
           line-height: 27px;
           padding: 0;
         }
-
-
       }
-
 
       &__slideshow {
         flex: 1 1 55%;
         padding: 1rem 4rem;
       }
-
-
     }
 
     @media screen and (min-width: 900px) {
       &__learnContent {
-
         h2 {
           font-size: 26px;
           line-height: 33px;
@@ -183,32 +167,29 @@
       }
 
       &__homeContent {
-
         h2 {
-          font-size: 26px;
+          font-size: 28px;
           line-height: 33px;
         }
 
         h5 {
-          font-size: 16px;
-          font-weight: 400;
+          font-size: 20px;
+          font-weight: 300;
         }
 
         p {
-          margin: 5px 0 25px 0;
-          font-size: 15px;
+          margin: 10px 0 30px 0;
+          font-size: 16px;
           line-height: 20px;
+          font-weight: 400;
         }
       }
-
-
     }
 
     @media screen and (min-width: 1200px) {
       &__learnContent {
-
         h2 {
-          font-size: 30px;
+          font-size: 28px;
           line-height: 33px;
         }
 
@@ -218,17 +199,16 @@
         }
 
         p {
-          margin: 10px 0 35px 0;
-          font-size: 18px;
+          margin: 10px 0 30px 0;
+          font-size: 16px;
           line-height: 20px;
           font-weight: 400;
         }
       }
 
       &__homeContent {
-
         h2 {
-          font-size: 32px;
+          font-size: 28px;
           line-height: 33px;
         }
 
@@ -238,16 +218,12 @@
         }
 
         p {
-          margin: 10px 0 35px 0;
-          font-size: 18px;
+          margin: 10px 0 30px 0;
+          font-size: 16px;
           line-height: 20px;
           font-weight: 400;
         }
       }
-
-
     }
   }
-
-
 }

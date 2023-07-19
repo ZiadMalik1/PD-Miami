@@ -1,9 +1,13 @@
 import React from "react";
+import { useHistory } from "react-router-dom";
+import * as Scroll from "react-scroll";
+import { Link } from "react-router-dom";
+import { animateScroll as scroll } from "react-scroll";
 import Button from "../../../UI/Button/Button";
 import Slideshow from "../../Slideshow/Slideshow";
 import classes from "./Details.module.scss";
 
-const LearnDetails = ({ onClick }) => {
+const LearnDetails = () => {
   return (
     <section className={classes.slideshow__section}>
       <div className={classes.slideshow__section__container}>
@@ -19,7 +23,6 @@ const LearnDetails = ({ onClick }) => {
             making a positive impact and creating a brighter future for the
             homeless population in our city.
           </p>
-          <Button alt>Get in Touch</Button>
         </div>
         <div className={classes.slideshow__section__container__slideshow}>
           <Slideshow
@@ -32,6 +35,15 @@ const LearnDetails = ({ onClick }) => {
 };
 
 const HomeDetails = () => {
+  const handleLinkClick = (event) => {
+    // Perform smooth scroll after navigating to the target page
+    scroll.scrollTo("targetComponent", {
+      smooth: true,
+      offset: -200, // Offset from the top when scrolling to the component (optional)
+      duration: 500, // Scroll duration in milliseconds
+    });
+  };
+
   return (
     <section className={classes.slideshow__section}>
       <div className={classes.slideshow__section__container}>
@@ -51,7 +63,9 @@ const HomeDetails = () => {
             generous donors, we aim to expand our services and create a lasting
             impact on those in need.
           </p>
-          <Button alt>Host a Service</Button>
+          <Link to="/learn-more#targetComponent">
+            <Button alt>Host a Service</Button>
+          </Link>
         </div>
       </div>
     </section>
