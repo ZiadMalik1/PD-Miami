@@ -1,14 +1,19 @@
 {
   "files": {
-    "main.css": "/static/css/main.0d225b76.css",
-    "main.js": "/static/js/main.21828275.js",
+    "main.css": "/static/css/main.f31e635f.css",
+    "main.js": "/static/js/main.8f5d302d.js",
+    "static/media/10.jpg": "/static/media/10.c8f4de5a948ffcef3ca9.jpg",
     "static/media/3.jpg": "/static/media/3.4803c207ac2dfb6df0c9.jpg",
     "static/media/Background_4.jpg": "/static/media/Background_4.87750242597da38b1c4e.jpg",
     "static/media/ChangeMakers.jpg": "/static/media/ChangeMakers.709132f0966330db17a7.jpg",
     "static/media/2.jpg": "/static/media/2.bd0f7197e4da8bb3cdf3.jpg",
     "static/media/1.jpg": "/static/media/1.4ed2c154db127784b3f2.jpg",
+    "static/media/14.jpg": "/static/media/14.3fe7b533f48258b5c205.jpg",
     "static/media/4.jpg": "/static/media/4.d9e9147495f5c191ebb7.jpg",
     "static/media/5.jpg": "/static/media/5.add2ae7ae44b59c49078.jpg",
+    "static/media/12.jpg": "/static/media/12.8cc36c122248dad48add.jpg",
+    "static/media/11.jpg": "/static/media/11.6f5d066ca47f7d323ebd.jpg",
+    "static/media/13.jpg": "/static/media/13.b0c264ecbeb44f72085f.jpg",
     "static/media/WhoIsHussain.png": "/static/media/WhoIsHussain.690337479c90cee60a88.png",
     "static/media/NCNW.png": "/static/media/NCNW.9bee114d77b44f8cbbb6.png",
     "static/media/PreDental.PNG": "/static/media/PreDental.f0faebe8be370c661e4b.PNG",
@@ -25,11 +30,11 @@
     "static/media/moderne_sans_font-webfont.woff": "/static/media/moderne_sans_font-webfont.b38600c31b4703fe3e8a.woff",
     "static/media/moderne_sans_font-webfont.woff2": "/static/media/moderne_sans_font-webfont.203e4f0c720d2e1942b9.woff2",
     "index.html": "/index.html",
-    "main.0d225b76.css.map": "/static/css/main.0d225b76.css.map",
-    "main.21828275.js.map": "/static/js/main.21828275.js.map"
+    "main.f31e635f.css.map": "/static/css/main.f31e635f.css.map",
+    "main.8f5d302d.js.map": "/static/js/main.8f5d302d.js.map"
   },
   "entrypoints": [
-    "static/css/main.0d225b76.css",
-    "static/js/main.21828275.js"
+    "static/css/main.f31e635f.css",
+    "static/js/main.8f5d302d.js"
   ]
 }
