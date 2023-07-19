@@ -10,7 +10,6 @@ const stripeTestPromise = loadStripe(PUBLIC_KEY);
 
 const StripeContainer = ({ amount }) => {
   const [clientSecret, setClientSecret] = useState("");
-  const [loading, setLoading] = useState(true);
   const appearance = {
     theme: "stripe",
     variables: {
@@ -36,17 +35,16 @@ const StripeContainer = ({ amount }) => {
         .then((res) => res.json())
         .then((data) => {
           setClientSecret(data.clientSecret);
-          setLoading(false);
         });
     }, 2000); // 2-second timeout
 
     // Clean up the timeout if the component unmounts before the timeout finishes
     return () => clearTimeout(timeout);
-  }, []);
+  }, [amount]);
 
   return (
     <div className="content-wrapper">
-      {loading ? (
+      {!clientSecret ? (
         <div className="loader">
           <div id="load"></div>
         </div>
