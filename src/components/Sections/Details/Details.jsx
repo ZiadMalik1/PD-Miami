@@ -1,8 +1,5 @@
 import React from "react";
-import { useHistory } from "react-router-dom";
-import * as Scroll from "react-scroll";
 import { Link } from "react-router-dom";
-import { animateScroll as scroll } from "react-scroll";
 import Button from "../../../UI/Button/Button";
 import Slideshow from "../../Slideshow/Slideshow";
 import classes from "./Details.module.scss";
@@ -35,15 +32,6 @@ const LearnDetails = () => {
 };
 
 const HomeDetails = () => {
-  const handleLinkClick = (event) => {
-    // Perform smooth scroll after navigating to the target page
-    scroll.scrollTo("targetComponent", {
-      smooth: true,
-      offset: -200, // Offset from the top when scrolling to the component (optional)
-      duration: 500, // Scroll duration in milliseconds
-    });
-  };
-
   return (
     <section className={classes.slideshow__section}>
       <div className={classes.slideshow__section__container}>

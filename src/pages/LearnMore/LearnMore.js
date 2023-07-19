@@ -1,11 +1,11 @@
+import React, { useEffect } from "react";
+import { useLocation } from "react-router-dom";
+import { Element, scroller } from "react-scroll";
 import ContactUs from "../../components/ContactUs/ContactUs";
 import Hero from "../../components/Hero/Hero";
 import Details from "../../components/Sections/Details/Details";
 import useScrollToTop from "../../hooks/useScrollToTop";
 import classes from "./LearnMore.module.scss";
-import React, { useEffect } from "react";
-import { Element, scroller } from "react-scroll";
-import { useLocation } from "react-router-dom";
 
 const LearnMore = () => {
   const location = useLocation();
@@ -28,7 +28,6 @@ const LearnMore = () => {
       <div className={classes.container}>
         <Details pageName={"learn"} />
         <Element name="targetComponent">
-          {/* Content of the component to scroll to */}
           <ContactUs />
         </Element>
       </div>
