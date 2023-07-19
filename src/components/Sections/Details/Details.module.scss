@@ -95,7 +95,7 @@
         flex: 1 1 45%;
         padding: 0 5rem;
         text-align: left;
-        align-items: start;
+        align-items: flex-start;
 
         h2 {
           font-size: 32px;
@@ -120,7 +120,7 @@
         flex: 1 1 45%;
         padding: 0 5rem;
         text-align: right;
-        align-items: end;
+        align-items: flex-end;
 
         h2 {
           font-size: 32px;

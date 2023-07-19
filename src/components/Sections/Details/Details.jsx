@@ -23,6 +23,7 @@ const LearnDetails = () => {
         </div>
         <div className={classes.slideshow__section__container__slideshow}>
           <Slideshow
+            learn
             className={classes.slideshow__section__container__slideshow__slide}
           />
         </div>
