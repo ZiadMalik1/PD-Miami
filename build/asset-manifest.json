@@ -1,0 +1,40 @@
+{
+  "files": {
+    "main.css": "/static/css/main.53aea718.css",
+    "main.js": "/static/js/main.a9811b9d.js",
+    "static/media/10.jpg": "/static/media/10.c8f4de5a948ffcef3ca9.jpg",
+    "static/media/3.jpg": "/static/media/3.4803c207ac2dfb6df0c9.jpg",
+    "static/media/Background_4.jpg": "/static/media/Background_4.87750242597da38b1c4e.jpg",
+    "static/media/ChangeMakers.jpg": "/static/media/ChangeMakers.709132f0966330db17a7.jpg",
+    "static/media/2.jpg": "/static/media/2.bd0f7197e4da8bb3cdf3.jpg",
+    "static/media/1.jpg": "/static/media/1.4ed2c154db127784b3f2.jpg",
+    "static/media/14.jpg": "/static/media/14.3fe7b533f48258b5c205.jpg",
+    "static/media/4.jpg": "/static/media/4.d9e9147495f5c191ebb7.jpg",
+    "static/media/5.jpg": "/static/media/5.add2ae7ae44b59c49078.jpg",
+    "static/media/12.jpg": "/static/media/12.8cc36c122248dad48add.jpg",
+    "static/media/11.jpg": "/static/media/11.6f5d066ca47f7d323ebd.jpg",
+    "static/media/13.jpg": "/static/media/13.b0c264ecbeb44f72085f.jpg",
+    "static/media/WhoIsHussain.png": "/static/media/WhoIsHussain.690337479c90cee60a88.png",
+    "static/media/NCNW.png": "/static/media/NCNW.9bee114d77b44f8cbbb6.png",
+    "static/media/PreDental.PNG": "/static/media/PreDental.f0faebe8be370c661e4b.PNG",
+    "static/media/Background_3.jpg": "/static/media/Background_3.9e18dcfcd5c1b9deadbe.jpg",
+    "static/media/Heal.JPG": "/static/media/Heal.2ce46acbfb851ebfbe0c.JPG",
+    "static/media/Logo.png": "/static/media/Logo.60b7545aec39dddc08a3.png",
+    "static/media/southbanklt-webfont.woff": "/static/media/southbanklt-webfont.74430eab742378fde2d3.woff",
+    "static/media/fredokaone-regular-webfont.woff": "/static/media/fredokaone-regular-webfont.376bfeca011f61d9ff2e.woff",
+    "static/media/fredokaone-regular-webfont.woff2": "/static/media/fredokaone-regular-webfont.941c357a894d62fc0249.woff2",
+    "static/media/moon2.0-regular-webfont.woff": "/static/media/moon2.0-regular-webfont.b53ac2fbf6f9047ccbec.woff",
+    "static/media/peace_sans-webfont.woff": "/static/media/peace_sans-webfont.44e567c39b89ef1e576b.woff",
+    "static/media/moon2.0-regular-webfont.woff2": "/static/media/moon2.0-regular-webfont.2498a615b177cf6d3989.woff2",
+    "static/media/peace_sans-webfont.woff2": "/static/media/peace_sans-webfont.5548b3c3b9addbc03883.woff2",
+    "static/media/moderne_sans_font-webfont.woff": "/static/media/moderne_sans_font-webfont.b38600c31b4703fe3e8a.woff",
+    "static/media/moderne_sans_font-webfont.woff2": "/static/media/moderne_sans_font-webfont.203e4f0c720d2e1942b9.woff2",
+    "index.html": "/index.html",
+    "main.53aea718.css.map": "/static/css/main.53aea718.css.map",
+    "main.a9811b9d.js.map": "/static/js/main.a9811b9d.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.53aea718.css",
+    "static/js/main.a9811b9d.js"
+  ]
+}
