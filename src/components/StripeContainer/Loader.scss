@@ -1,0 +1,58 @@
+/* styles.scss */
+
+.loader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 200px; /* Set a fixed height to maintain layout during transition */
+  opacity: 1;
+  transition: opacity 0.3s ease;
+  padding-bottom: 1rem;
+}
+
+#load {
+  border: 6px solid #f3f3f3; /* Light grey */
+  border-top: 6px solid #1e2123; /* Blue */
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* Add any additional styles for your loader here */
+
+.content-wrapper {
+  position: relative;
+  height: auto;
+}
+
+/* Add any additional styles for the PaymentForm content here */
+.content {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+  color: #333;
+
+  /* Swipe Transition */
+  transform: translateX(0);
+  transition: transform 0.5s ease, opacity 0.5s ease;
+  opacity: 1;
+}
+
+.hidden {
+  opacity: 0;
+  pointer-events: none; /* Make sure the hidden element is not clickable */
+  transform: translateX(-100%);
+}

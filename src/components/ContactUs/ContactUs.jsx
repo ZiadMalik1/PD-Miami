@@ -69,6 +69,7 @@ const ContactUs = () => {
               <textarea
                 id="subject"
                 name="message"
+                style={{ resize: "none" }}
                 value={message}
                 onChange={(e) => setMessage(e.target.value)}
                 required
