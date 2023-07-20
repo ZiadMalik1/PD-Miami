@@ -9,7 +9,7 @@
     "@pmmmwh/react-refresh-webpack-plugin": "^0.5.3",
     "@stripe/react-stripe-js": "^1.16.4",
     "@stripe/stripe-js": "^1.46.0",
-    "@svgr/webpack": "^8.0.1",
+    "@svgr/webpack": "^5.5.0",
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
@@ -93,8 +93,8 @@
     ]
   },
   "engines": {
-    "node": "20.4.0",
-    "npm": "9.8.1"
+    "node": ">=12.x.x <=16.x.x",
+    "npm": ">=6.0.0"
   },
   "devDependencies": {
     "dotenv-webpack": "^8.0.1",
