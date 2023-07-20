@@ -92,6 +92,10 @@
       "last 1 safari version"
     ]
   },
+  "engines": {
+    "node": ">=12.x.x <=16.x.x",
+    "npm": ">=6.0.0"
+  },
   "devDependencies": {
     "dotenv-webpack": "^8.0.1",
     "gh-pages": "^5.0.0",
