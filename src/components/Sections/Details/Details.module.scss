@@ -20,6 +20,20 @@
       order: 1;
     }
 
+    &__map {
+      flex: 1 1 80%;
+      margin: 0 0 1rem;
+      order: 1;
+      display: flex;
+      flex-direction: column;
+      &__buttons {
+        margin: 1rem 0;
+        display: flex;
+        justify-content: center;
+        gap: 1rem;
+      }
+    }
+
     &__learnContent {
       order: 2;
       display: flex;
@@ -144,6 +158,18 @@
       &__slideshow {
         flex: 1 1 55%;
         padding: 1rem 4rem;
+      }
+      &__map {
+        flex: 1 1 55%;
+        padding: 1rem 4rem;
+        display: flex;
+        flex-direction: column;
+        &__buttons {
+          margin-top: 2rem;
+          display: flex;
+          justify-content: center;
+          gap: 1rem;
+        }
       }
     }
 

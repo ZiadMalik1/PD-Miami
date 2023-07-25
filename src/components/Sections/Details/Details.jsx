@@ -1,10 +1,28 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import Button from "../../../UI/Button/Button";
+import Map from "../../Map/Map";
 import Slideshow from "../../Slideshow/Slideshow";
 import classes from "./Details.module.scss";
 
 const LearnDetails = () => {
+  const location = {
+    latitude: 25.772354,
+    longitude: -80.197367,
+  };
+
+  const openInGoogleMaps = () => {
+    window.open(
+      `https://www.google.com/maps?q=${location.latitude},${location.longitude}`
+    );
+  };
+
+  const openInAppleMaps = () => {
+    window.open(
+      `http://maps.apple.com/?ll=${location.latitude},${location.longitude}`
+    );
+  };
+
   return (
     <section className={classes.slideshow__section}>
       <div className={classes.slideshow__section__container}>
@@ -12,20 +30,25 @@ const LearnDetails = () => {
           <h5>Learn More</h5>
           <h2>Empowering Miami's Homeless Community</h2>
           <p>
-            At Project Downtown Miami, we are a compassionate non-profit
-            organization. Our mission is to provide essential resources like
-            food, clothing, and hygiene supplies to the homeless community in
-            downtown Miami. With the help of our dedicated team and volunteers,
-            we strive to bring comfort and support to those in need. Join us in
-            making a positive impact and creating a brighter future for the
-            homeless population in our city.
+            In its eighth verse, Surat al-Insan states “And they give food in
+            spite of love for it to the needy, the orphan, and the captive.”
+            Prophet Muhammad صلى الله عليه وسلم was stated to have quoted, “Feed
+            the hungry, spread peace, speak kind words, and pray at night when
+            people are sleeping. You will enter Paradise in peace.” A collection
+            of students in Miami, Florida have taken these quotes to heart and
+            began to feed the homeless weekly. Thus, Project Downtown Miami was
+            formed. Going on almost 20 years, join Project Downtown Miami in its
+            mission to secure weekly meals for the less fortunate, as well as
+            provide necessary supplies to those that need them. Checkout the map
+            to see where we're serving currently!
           </p>
         </div>
-        <div className={classes.slideshow__section__container__slideshow}>
-          <Slideshow
-            learn
-            className={classes.slideshow__section__container__slideshow__slide}
-          />
+        <div className={classes.slideshow__section__container__map}>
+          <Map />
+          <div className={classes.slideshow__section__container__map__buttons}>
+            <Button onClick={openInGoogleMaps}>Open in Google Maps</Button>
+            <Button onClick={openInAppleMaps}>Open in Apple Maps</Button>
+          </div>
         </div>
       </div>
     </section>
