@@ -25,7 +25,17 @@ const MapComponent = withScriptjs(
           <InfoWindow onCloseClick={props.onMarkerClose}>
             <div style={{ textAlign: "center" }}>
               <h3>Lot 33</h3>
-              <p>155 SW 2nd Ave, Miami, FL 33130</p>
+              <a
+                href={`https://www.google.com/maps?q=${25.772354},${-80.197367}`}
+                target="_blank"
+                style={{
+                  color: "#007bff",
+                  textDecoration: "none",
+                  fontWeight: "bold",
+                }}
+              >
+                155 SW 2nd Ave, Miami, FL 33130
+              </a>
             </div>
           </InfoWindow>
         )}
