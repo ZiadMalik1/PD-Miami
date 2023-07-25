@@ -43,12 +43,8 @@ const LearnDetails = () => {
             to see where we're serving currently!
           </p>
         </div>
-        <div className={classes.slideshow__section__container__map}>
+        <div className={classes.slideshow__section__container__slideshow}>
           <Map />
-          <div className={classes.slideshow__section__container__map__buttons}>
-            <Button onClick={openInGoogleMaps}>Open in Google Maps</Button>
-            <Button onClick={openInAppleMaps}>Open in Apple Maps</Button>
-          </div>
         </div>
       </div>
     </section>
