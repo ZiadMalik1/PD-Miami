@@ -4,9 +4,11 @@ import classes from "./Logo.module.scss";
 
 const Logo = () => {
   return (
-    <a href="/" className={classes.logo}>
-      <img src={LogoPD} alt="" />
-    </a>
+    <div className={classes.logo}>
+      <a href="/">
+        <img src={LogoPD} alt="" />
+      </a>
+    </div>
   );
 };
 
