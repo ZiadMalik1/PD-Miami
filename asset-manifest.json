@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.022d1fcb.css",
-    "main.js": "/static/js/main.4f5f9777.js",
+    "main.css": "/static/css/main.2ac43ac4.css",
+    "main.js": "/static/js/main.061955cb.js",
     "static/media/10.jpg": "/static/media/10.c8f4de5a948ffcef3ca9.jpg",
     "static/media/3.jpg": "/static/media/3.4803c207ac2dfb6df0c9.jpg",
     "static/media/Background_4.jpg": "/static/media/Background_4.87750242597da38b1c4e.jpg",
@@ -19,7 +19,7 @@
     "static/media/PreDental.PNG": "/static/media/PreDental.f0faebe8be370c661e4b.PNG",
     "static/media/Background_3.jpg": "/static/media/Background_3.9e18dcfcd5c1b9deadbe.jpg",
     "static/media/Heal.JPG": "/static/media/Heal.2ce46acbfb851ebfbe0c.JPG",
-    "static/media/Logo.png": "/static/media/Logo.8ca23ec50f933a6bb545.png",
+    "static/media/Logo.png": "/static/media/Logo.a2bfd1b9c369e4864ffe.png",
     "static/media/southbanklt-webfont.woff": "/static/media/southbanklt-webfont.74430eab742378fde2d3.woff",
     "static/media/fredokaone-regular-webfont.woff": "/static/media/fredokaone-regular-webfont.376bfeca011f61d9ff2e.woff",
     "static/media/fredokaone-regular-webfont.woff2": "/static/media/fredokaone-regular-webfont.941c357a894d62fc0249.woff2",
@@ -30,11 +30,11 @@
     "static/media/moderne_sans_font-webfont.woff": "/static/media/moderne_sans_font-webfont.b38600c31b4703fe3e8a.woff",
     "static/media/moderne_sans_font-webfont.woff2": "/static/media/moderne_sans_font-webfont.203e4f0c720d2e1942b9.woff2",
     "index.html": "/index.html",
-    "main.022d1fcb.css.map": "/static/css/main.022d1fcb.css.map",
-    "main.4f5f9777.js.map": "/static/js/main.4f5f9777.js.map"
+    "main.2ac43ac4.css.map": "/static/css/main.2ac43ac4.css.map",
+    "main.061955cb.js.map": "/static/js/main.061955cb.js.map"
   },
   "entrypoints": [
-    "static/css/main.022d1fcb.css",
-    "static/js/main.4f5f9777.js"
+    "static/css/main.2ac43ac4.css",
+    "static/js/main.061955cb.js"
   ]
 }
