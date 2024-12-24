@@ -22,6 +22,7 @@ const getAmount = (amount) => {
 };
 
 app.post("/create-payment-intent", cors(), async (req, res) => {
+  
   const { items } = req.body;
 
   // Create a PaymentIntent with the order amount and currency

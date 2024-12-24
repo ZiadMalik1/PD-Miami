@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Route, Routes } from "react-router-dom";
+import { Route, Routes, useNavigate } from "react-router-dom";
 import "./App.scss";
 import Modal from "./UI/Modal/Modal";
 import DonationForm from "./components/DonationForm/DonationForm";
@@ -13,6 +13,13 @@ import PaymentSuccess from "./pages/PaymentSuccess/PaymentSuccess";
 const App = () => {
   const [donationModalState, setDonationModalState] = useState(false);
   const [donation, setDonation] = useState({ amount: 0, setAmount: false });
+
+  const navigate = useNavigate();
+
+  const handleDonateClick = () => {
+    window.location.href =
+      "https://www.paypal.com/donate/?hosted_button_id=U28DGD9TQYWVY";
+  };
 
   return (
     <>
@@ -44,18 +51,10 @@ const App = () => {
       <Header
         modalState={donationModalState}
         setModalState={setDonationModalState}
+        onClick={handleDonateClick}
       />
       <Routes>
-        <Route
-          path="/"
-          exact
-          element={
-            <Home
-              modalState={donationModalState}
-              setModalState={setDonationModalState}
-            />
-          }
-        />
+        <Route path="/" exact element={<Home onClick={handleDonateClick} />} />
         <Route path="/learn-more" exact element={<LearnMore />} />
         <Route path="/locations" exact element={<LocationsPage />} />
         <Route path="/success" element={<PaymentSuccess />} />

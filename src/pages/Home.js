@@ -4,15 +4,11 @@ import Hero from "../components/Hero/Hero";
 import Locations from "../components/Locations/Locations";
 import Details from "../components/Sections/Details/Details";
 
-const Home = ({ setModalState }) => {
+const Home = ({ onClick }) => {
   return (
     <>
       <div>
-        <Hero
-          onClick={() => {
-            setModalState(true);
-          }}
-        />
+        <Hero onClick={onClick} />
         <Details />
         <Locations />
       </div>
